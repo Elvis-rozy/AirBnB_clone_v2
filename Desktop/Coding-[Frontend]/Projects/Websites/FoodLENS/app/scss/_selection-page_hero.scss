@@ -1,0 +1,128 @@
+header {
+
+    nav {
+
+        .search-form {
+            position: relative;
+
+            input {
+                background-color: rgb(225, 225, 225);
+                @include width-height ("350px", "35px");
+                padding: 0 10px 0 35px;
+                border-radius: 30px;
+                box-shadow: none;
+                color: var(--text);
+                text-align: start;
+                font-size: 16px;
+                cursor: pointer;
+                transition: .3s;
+                outline: none;
+
+                &::placeholder {
+                    color: rgb(158, 158, 158);
+                    font-size: 14px;
+                }
+
+                &:hover {
+                    background: rgb(204, 204, 204);
+                }
+            }
+
+            img {
+                @include width-height ("23px", "22px");
+                transform: translateY(-50%);
+                filter: brightness(1.4);
+                position: absolute;
+                left: 10px;
+                top: 50%;
+            }
+        }
+    }
+}
+
+.result {
+    background: url('/Images/backgrounds/features-bg.png');
+    @include background-size-position-repeat ("contain", "top", "repeat");
+    @include width-height ("100%", "auto");
+    grid-template-columns: repeat(2, 1fr);
+    padding: 15vh 30px 40px;
+    color: var(--text);
+    display: grid;
+    gap: 30px;
+
+    img {
+        @include width-height ("100%", "300px");
+    }
+
+    .food-details {
+        @include Display-align ("flex", "start");
+        flex-direction: column;
+        padding: 0 30px;
+        gap: 10px;
+
+        p {
+            text-align: start;
+        }
+
+        .foodInfo {
+            width: 100%;
+
+            table {
+                border-collapse: collapse;
+                margin-top: 10px;
+                width: 100%;
+
+                td {
+                    border: 1px solid #dbdbdb;
+                    padding: 8px 20px;
+                    text-align: start;
+                }
+
+                .last {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .nutrition-facts {
+
+        .cal {
+            font-weight: 700;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-top: 10px;
+            width: 100%;
+
+            th, td {
+                border: 1px solid #dbdbdb;
+                padding: 8px 20px;
+                text-align: start;
+            }
+
+            .last {
+                text-align: center;
+            }
+        }
+    }
+
+    .ingredients-info {
+        @include Display-align-justify ("flex", "start", " space-between");
+        flex-direction: column;
+        text-align: start;
+        gap: 10px;
+
+        h3 {
+            text-align: start;
+        }
+
+        p {
+            border: 1px solid #dbdbdb;
+            padding: 10px;
+        }
+    }
+}

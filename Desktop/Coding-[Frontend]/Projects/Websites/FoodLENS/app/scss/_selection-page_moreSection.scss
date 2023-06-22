@@ -1,0 +1,40 @@
+.more {
+    overscroll-behavior-inline: contain;
+    grid-auto-columns: 36%;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    padding: 30px;
+    display: grid;
+    gap: 30px;
+
+    .more-card {
+        background: #8080801a;
+        border-radius: 10px;
+        overflow: hidden;
+
+        img {
+            @include width-height ("100%", "250px");
+        }
+
+        h5 {
+            text-align: start;
+            font-size: 18px;
+            padding: 5px;
+        }
+
+        p {
+            padding: 0 0 10px 5px;
+            text-align: start;
+            font-size: 15px;
+        }
+    }
+}
+
+.snaps-inline {
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 30px;
+}
+
+.snaps-inline > * {
+    scroll-snap-align: start;
+}

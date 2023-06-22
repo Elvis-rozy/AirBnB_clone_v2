@@ -1,0 +1,131 @@
+/*
+=========================================
+Login Form setup
+=========================================
+*/
+.form {
+    @include Display-align-justify ("flex", "center", "center");
+    @include width-height ("100%", "100vh");
+    flex-direction: column;
+    position: relative;
+
+    h1, .input-box, input, label, a, p {
+        position: relative;
+    }
+
+    &::before {
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        filter: blur(4px) brightness(.7);
+        background: url('/Images/backgrounds/login-bg.jpg');
+        @include background-size-position-repeat ("cover", "center", "no-repeat");
+    }
+
+    .h1A {
+        padding-bottom: 60px;
+    }
+
+    h1 {
+        color: var(--white);
+        font-weight: 300;
+        font-size: 52px;
+    }
+
+    .spec1 {
+        margin-bottom: 45px;
+    }
+
+    .input-box {
+        border-bottom: 2px solid var(--white);
+        border-radius: 20px;
+        width: 400px;
+
+        label {
+            transform: translateY(-50%);
+            pointer-events: none;
+            color: var(--white);
+            position: absolute;
+            font-size: 1em;
+            transition: .3s;
+            left: 20px;
+            top: 50%;
+        }
+
+        input {
+            @include width-height ("100%", "45px");
+            background: transparent;
+            padding: 0 20px 0 20px;
+            color: var(--white);
+            font-size: 1.2em;
+            text-align: start;
+            outline: none;
+
+            &:focus~label, &:valid~label {
+                top: -7px;
+            }
+        }
+    }
+
+    .remember-forgot {
+        @include Display-justify ("flex", "space-between");
+        margin: -25px 20px 25px;
+        color: var(--white);
+        font-size: .9em;
+
+        label input {
+            margin-right: 5px;
+        }
+
+        a {
+            color: var(--white);
+            transition: .3s;
+
+            &:hover {
+                text-decoration: underline;
+                color: var(--cta);
+            }
+        }
+    }
+
+    button {
+        min-width: 100%;
+    }
+
+    .login-btn {
+        @extend button ;
+    }
+
+    .register-link {
+        margin: 25px 0 10px;
+        color: var(--white);
+        font-size: .9em;
+
+        p a {
+            color: var(--white);
+            font-weight: 600;
+            transition: .3s;
+
+            &:hover {
+                text-decoration: underline;
+                color: var(--cta);
+            }
+        }
+    }
+}
+/*
+=========================================
+Mobile and Tab setup
+=========================================
+*/
+@media (max-width: 950px) {
+
+    .form {
+        .input-box {
+            width: 300px;
+        }
+    }
+}

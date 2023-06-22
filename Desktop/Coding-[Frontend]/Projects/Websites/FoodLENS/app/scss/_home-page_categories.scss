@@ -1,0 +1,97 @@
+#categories {
+    @include Display-align-justify ("flex", "center", "center");
+    @include width-height ("100%", "100vh");
+    flex-direction: column;
+    position: relative;
+
+    h3 {
+        margin: 40px 0 20px;
+        font-weight: 700;
+        color: var(--text);
+        font-size: 22px;
+    }
+
+    .boxes {
+        grid-template-columns: repeat(3, 1fr);
+        display: grid;
+        gap: 20px;
+
+        span {
+            @include background-size-position-repeat ("cover", "center", "no-repeat");
+            @include Display-align-justify ("flex", "center", "center");
+            @include width-height ("300px", "200px");
+            position: relative;
+            cursor: pointer;
+
+            h6 {
+                position: relative;
+                color: var(--cta);
+                font-size: 22px;
+            }
+
+            &::before{
+                content: '';
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                position: absolute;
+                filter: brightness(.6);
+                @include background-size-position-repeat ("cover", "center", "no-repeat");
+            }
+
+            &:first-child {
+                &::before {
+                    background-image: url('/Images/backgrounds/cat-all.jpg');
+                }
+            }
+
+            &:nth-child(2) {
+                &::before {
+                    background-image: url('/Images/backgrounds/cat-starch.jpg');
+                }
+            }
+
+            &:nth-child(3) {
+                &::before {
+                    background-image: url('/Images/backgrounds/cat-meat.jpg');
+                }
+            }
+
+            &:nth-child(4) {
+                &::before {
+                    background-image: url('/Images/backgrounds/cat-pastries.jpg');
+                }
+            }
+
+            &:last-child {
+                &::before {
+                    background-image: url('/Images/backgrounds/cat-fruits.jpg');
+                }
+            }
+        }
+    }
+}
+/*
+=========================================
+Mobile and Tab setup
+=========================================
+*/
+@media (max-width: 950px) {
+
+    #categories {
+        padding-top: 7vh;
+        height: auto;
+
+        .boxes {
+            grid-template-columns: repeat(2, 1fr);
+
+        @media (max-width: 550px) {
+
+                span {
+                    @include width-height ("160px", "100px");
+                }
+            }
+        }
+    }
+}

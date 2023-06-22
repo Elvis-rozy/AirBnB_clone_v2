@@ -1,0 +1,64 @@
+/*=========================================
+Reviews Setup
+=========================================*/
+.review-cards {
+    @include width-height ("100%", "auto");
+    @include Display-align ("flex", "center");
+    padding: 100px 0 50px;
+    flex-direction: column;
+    position: relative;
+
+    h3 {
+        padding-bottom: 25px;
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    .review-card {
+        box-shadow: 1px 1px 6px rgb(153, 153, 153);
+        @include Display-align ("flex", "center");
+        background: rgb(245, 245, 245);
+        flex-direction: column;
+        border-radius: 20px;
+        overflow: hidden;
+        width: 500px;
+
+        img {
+            @include width-height ("100%", "300px");
+        }
+
+        h6 {
+            padding: 20px 0 10px;
+            font-weight: 500;
+            font-size: 18px;
+        }
+
+        .head-info {
+            font-size: 10.3px;
+        }
+
+        .info {
+            padding: 15px 20px 30px;
+            font-weight: 500;
+            font-size: 13px;
+        }
+    }
+}
+/*
+=========================================
+Mobile and Tab setup
+=========================================
+*/
+@media (max-width: 550px) {
+
+    .review-cards {
+
+        h3 {
+            font-size: 20px;
+        }
+
+        .review-card {
+            width: 310px;
+        }
+    }
+}

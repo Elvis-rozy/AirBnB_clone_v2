@@ -1,0 +1,197 @@
+/*=========================================
+About Setup
+=========================================*/
+.main{
+
+    .topH2 {
+        @include Display-align-justify("flex", "center", "center");
+        font-weight: 700;
+        position: relative;
+        font-style: italic;
+        color: var(--cta);
+        font-size: 55px;
+        height: 400px;
+
+        span {
+            display: inline-block;
+            animation: dance 2s infinite;
+
+            &:nth-child(1) {animation-delay: .1s;}
+            &:nth-child(2) {animation-delay: .2s;}
+            &:nth-child(3) {animation-delay: .3s;}
+            &:nth-child(4) {animation-delay: .4s;}
+            &:nth-child(5) {animation-delay: .5s;}
+            &:nth-child(6) {animation-delay: .6s;}
+            &:nth-child(7) {animation-delay: .7s;}
+            &:nth-child(8) {animation-delay: .8s;}
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            filter: brightness(.7);
+            background-image: url('/images/backgrounds/about-bg.jpg');
+            @include background-size-position-repeat ("cover", "center", "no-repeat");
+        }
+    }
+
+    .about {
+        background-image: url('/images/backgrounds/header-bg.png');
+        @include background-size-position-repeat ("contain", "center", "no-repeat");
+        @include Display-align("flex", "center");
+        padding: 40px 40px 80px;
+        overflow-x: hidden;
+
+        h2 {
+            transform: rotate(-90deg);
+            font-weight: 700;
+            font-style: italic;
+            color: var(--cta);
+            font-size: 50px;
+            height: 60px;
+        }
+
+        .first-box {
+            @include Display-align("flex", "end");
+            flex-direction: column;
+            margin-right: 40px;
+            margin-bottom: 0;
+            gap: 40px;
+
+            p {
+                padding-right: 40px;
+            }
+        }
+
+        .second-box {
+            @include Display-align("flex", "start");
+            flex-direction: column;
+            margin-left: 40px;
+            gap: 40px;
+
+            p {
+                padding-left: 40px;
+            }
+        }
+
+        .first-box img, .second-box img {
+            @include width-height("300px", "350px");
+        }
+    }
+}
+
+.new-section {
+    background-image: url('/images/backgrounds/header-bg.png');
+    @include background-size-position-repeat ("contain", "center", "no-repeat");
+    overflow-x: hidden;
+    padding: 0 60px;
+    text-align: start;
+
+    h3 {
+        padding-bottom: 30px;
+        color: var(--text-blac);
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    .about-cards {
+        padding-bottom: 30px;
+        position: relative;
+        text-align: start;
+        display: flex;
+        gap: 25px;
+
+        .about-card {
+            border: 1px solid rgb(225, 225, 225);
+            @include Display-align("flex", "center");
+            background: rgb(245, 245, 245);
+            flex-direction: column;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            transition: .3s;
+            width: 100%;
+            gap: 10px;
+
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
+
+            &:hover {
+                box-shadow: 1px 4px 6px rgb(153, 153, 153);
+                transform: scale(1.1);
+            }
+
+            img {
+                @include width-height ("100%", "220px");
+            }
+
+            h5 {
+                font-weight: 500;
+                font-size: 18px;
+            }
+
+            p {
+                padding: 10px 15px 30px;
+                font-size: 13px;
+            }
+
+            .btn {
+                padding-bottom: 20px;
+            }
+        }
+    }
+}
+/*=========================================
+Mobile and Tab setup
+=========================================*/
+@media (max-width: 950px) {
+
+    .main {
+
+        .topH2 {
+            font-size: 34px;
+        }
+
+        .about {
+            display: block;
+
+            h2 {
+                font-size: 30px;
+                transform: rotate(0);
+            }
+
+            .first-box {
+                margin-right: 0;
+                margin-bottom: 30px;
+
+                p {
+                    padding-right: 0;
+                }
+            }
+
+            .second-box {
+                margin-left: 0;
+
+                p {
+                    padding-left: 0;
+                }
+            }
+        }
+
+        .new-section {
+
+            .about-cards {
+                display: block;
+
+                .about-card:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}

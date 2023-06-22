@@ -1,0 +1,50 @@
+/*=========================================
+General Styles
+=========================================*/
+@import "globals";
+@import "mixins";
+@import "animation";
+
+/*=========================================
+Global Styles
+=========================================*/
+@import "header";
+@import "hero";
+@import "footer";
+
+/*=========================================
+Landing page Styles
+=========================================*/
+@import "brands";
+@import "about";
+@import "reviews";
+@import "blog";
+/*=========================================
+Login page Styles
+=========================================*/
+@import "login";
+@import "signup";
+/*=========================================
+Home page Styles
+=========================================*/
+@import "home-page_hero";
+@import "home-page_categories";
+@import "home-page_favorites";
+/*=========================================
+Profile page Styles
+=========================================*/
+@import "dashboard";
+/*=========================================
+Profile page Styles
+=========================================*/
+@import "selection-page_hero";
+@import "selection-page_videoTutorial";
+@import "selection-page_moreSection";
+/*=========================================
+Profile page Styles
+=========================================*/
+@import "search-result_hero";
+/*=========================================
+Categories page Styles
+=========================================*/
+@import "categories_hero";

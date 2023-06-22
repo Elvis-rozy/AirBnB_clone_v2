@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+    ==================== stylesheet  ====================
+        -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>FoodLENS-Signup Page</title>
+</head>
+<body>
+    <!--
+    ==================== Header & Nav  ====================
+        -->
+    <header>
+        <nav>
+            <a href="index.html"><img class="header_logo" src="Images/logo/Logo.png" alt="Foodlens logo"></a>
+        </nav>
+    </header>
+        <!--
+    ==================== Form Section  ====================
+        -->
+    <section class="form">
+        <form id="signup-form">
+            <h1 class="h1B">Register</h1>
+            <div class="input-box spec2">
+                <input class="input" type="text"  id="name" name="name" required>
+                <label for="name">Full Name</label>
+            </div>
+            <div class="input-box spec2">
+                <input class="input" type="email" id="email" name="email" required>
+                <label for="email">Email</label>
+            </div>
+            <div class="input-box spec2">
+                <input class="input" type="password" id="password" name="password" required>
+                <label for="password">Password</label>
+            </div>
+            <!--
+            ==================== Submit Button  ====================
+            -->
+            <button><input type="submit" class="login-btn" value="Submit"></button>
+            <div class="register-link">
+                <p>Already have an account? <a href="login.html">Log In</a></p>
+            </div>
+        </form>
+    </section>
+    <!--
+    ==================== JavaScript File  ====================
+    -->
+    <script src="app/js/web-features.js"></script>
+</body>
+</html>

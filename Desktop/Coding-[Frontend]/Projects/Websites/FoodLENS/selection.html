@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+    ==================== stylesheet  ====================
+    -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>FoodLENS-Selection-page</title>
+</head>
+<body>
+    <!--
+    ==================== Header & Nav  ====================
+    -->
+    <header>
+        <nav>
+            <a href="#"><img class="header_logo" src="Images/logo/Logo.png" alt="Foodlens logo"></a>
+            <ul>
+                <li class="hide-for-mobile"><a href="#">Home</a></li>
+                <li class="hide-for-mobile"><a href="#categories">Categories</a></li>
+                <li class="hide-for-mobile"><a href="#favorites">Favorites</a></li>
+                <li class="hide-for-mobile"><a href="about.html">About</a></li>
+                <li class="hide-for-mobile"><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="search-form">
+                <input type="search" id="search-box" placeholder="Search ...">
+                <label for="search-box" class="search"><img src="Images/logo/search.png" alt=""></label>
+            </div>
+
+            <a class="profile" href="dashboard.html"><img src="Images/logo/profile.png" alt="profile icon"></a>
+            <!--
+            ==================== Mobile menu Icon  ====================
+            -->
+            <div id="menu" href="" class="hide-for-desktop menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!--
+            ==================== Mobile menu Links  ====================
+            -->
+            <div class="mobile-menu hide-for-desktop">
+                <ul class="lnk">
+                    <li class="hide-for-desktop lnk"><a href="#">Home</a></li><!--
+                --><li class="hide-for-desktop lnk"><a href="dashboard.html">Profile</a></li> <!--
+                --><li class="hide-for-desktop lnk"><a href="#categories">Categories</a></li> <!--
+                --><li class="hide-for-desktop lnk"><a href="#favorites">Favorites</a></li> <!--
+                --><li class="hide-for-desktop lnk"><a href="about.html">About</a></li><!--
+                --><li class="hide-for-desktop lnk"><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!--
+    ==================== Search Result Section  ====================
+    -->
+    <section class="result">
+        <img src="Images/backgrounds/selection.jpg" alt="food image">
+        <div class="food-details">
+            <h3>Food Name</h3>
+            Description
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                 elit. Quae dolores culpa quos sint perferendis ea
+                 elit. Quae dolores culpa quos sint perferendis ea
+                 elit. Quae dolores culpa quos sint perferendis ea
+                 elit. Quae dolores culpa quos sint perferendis ea
+            </p>
+            <div class="foodInfo">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Serving Quantity:</td>
+                            <td class="last">33</td>
+                        </tr>
+                        <tr>
+                            <td>Serving Unit:</td>
+                            <td class="last">15</td>
+                        </tr>
+                        <tr>
+                            <td>Serving Weight Grams:</td>
+                            <td class="last">47grams</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="nutrition-facts">
+            <h3>Nutrition Facts</h3>
+            <p class="cal">Calories:<strong>155</strong></p>
+            <p>The % Daily Value (DV) tells you how much a nutrient in
+                a serving of food contributes to a daily diet. 2000 calories a
+                day is used for general nutrition advice.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Total</th>
+                        <th scope="col">% Daily Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Total Carbohydrates  </strong>13g</td>
+                        <td class="last"><strong>5</strong>%</td>
+                    </tr>
+                    <tr>
+                        <td>Dietry Fiber <strong>1.2g</strong></td>
+                        <td class="last"><strong>4</strong>%</td>
+                    </tr>
+                    <tr>
+                        <td>Sugars  <strong>8.5g</strong></td>
+                        <td class="last"><strong>4</strong>%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total Protein  </strong>13g</td>
+                        <td class="last"><strong>5</strong>%</td>
+                    </tr>
+                    <tr>
+                        <td>Vitamin D <strong>0mcg</strong></td>
+                        <td class="last"><strong>0</strong>%</td>
+                    </tr>
+                    <tr>
+                        <td>Calcium  <strong>40mg</strong></td>
+                        <td class="last"><strong>4</strong>%</td>
+                    </tr>
+                    <tr>
+                        <td>Iron  <strong>0.9mg</strong></td>
+                        <td class="last"><strong>4</strong>%</td>
+                    </tr>
+                    <tr>
+                        <td>Potassium  <strong>93.2mg</strong></td>
+                        <td class="last"><strong>4</strong>%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total Fats  </strong>13g</td>
+                        <td class="last"><strong>5</strong>%</td>
+                    </tr>
+                    <tr>
+                        <td>Saturated Fat <strong>4.2g</strong></td>
+                        <td class="last"><strong>4</strong>%</td>
+                    </tr>
+                    <tr>
+                        <td>Trans Fat  <strong>0g</strong></td>
+                        <td class="last"><strong>4</strong>%</td>
+                    </tr>
+                    <tr>
+                        <td>Polyunsaturated Fat  <strong>0g</strong></td>
+                        <td class="last"><strong>4</strong>%</td>
+                    </tr>
+                    <tr>
+                        <td>Monounsaturated Fat  <strong>0g</strong></td>
+                        <td class="last"><strong>4</strong>%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="ingredients">
+            <div class="ingredients-info">
+                <h3>Ingredients</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Vitae facilis esse consectetur, deleniti officiis temporibus
+                     ratione laudantium inventore perspiciatis nemo quidem
+                     doloribus voluptatum deserunt officia ipsam, assumenda
+                      ipsa enim iusto.
+                     Vitae facilis esse consectetur, deleniti officiis temporibus
+                     ratione laudantium inventore perspiciatis nemo quidem
+                     doloribus voluptatum deserunt officia ipsam, assumenda
+                      ipsa enim iusto.
+                     Vitae facilis esse consectetur, deleniti officiis temporibus
+                     ratione laudantium inventore perspiciatis nemo quidem
+                     doloribus voluptatum deserunt officia ipsam, assumenda
+                      ipsa enim iusto.
+                </p>
+                Ingredient Info source: <a href="#">source_name</a>
+            </div>
+        </div>
+    </section>
+    <!--
+    ==================== Video Tutorial Section  ====================
+    -->
+    <section class="video-tutorial">
+        <h3>Video Tutorial</h3>
+        <div class="video">
+            <iframe width="100%" height="100%"
+                src="https://www.youtube.com/embed/Czbz9jbU6nE"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <h4>Food Name</h4>
+        <p>You can watch the video on youtube <a href="https://www.youtube.com/embed/Czbz9jbU6nE">here</a></p>
+    </section>
+    <!--
+    ==================== More Options Section  ====================
+    -->
+    <section class="more-section">
+        <h3>You May also Like</h3>
+        <div class="more snaps-inline">
+            <div class="more-card">
+                <img src="Images/backgrounds/cat-starch.jpg" alt="food image">
+                <h5>Flavor Profiling</h5>
+                <p>Ever wondered what makes a</p>
+            </div>
+            <div class="more-card">
+                <img src="Images/uncompressed/more2.jpg" alt="food image">
+                <h5>Flavor Profiling</h5>
+                <p>Ever wondered what makes a</p>
+            </div>
+            <div class="more-card">
+                <img src="Images/backgrounds/cat-meat.jpg" alt="food image">
+                <h5>Flavor Profiling</h5>
+                <p>Ever wondered what makes a</p>
+            </div>
+            <div class="more-card">
+                <img src="Images/uncompressed/more3.jpg" alt="food image">
+                <h5>Flavor Profiling</h5>
+                <p>Ever wondered what makes a</p>
+            </div>
+            <div class="more-card">
+                <img src="Images/backgrounds/fav4.jpg" alt="food image">
+                <h5>Flavor Profiling</h5>
+                <p>Ever wondered what makes a</p>
+            </div>
+            <div class="more-card">
+                <img src="Images/uncompressed/more5.jpg" alt="food image">
+                <h5>Flavor Profiling</h5>
+                <p>Ever wondered what makes a</p>
+            </div>
+        </div>
+    </section>
+    <!--
+    ==================== Footer & Contact  ====================
+      -->
+      <footer id="contact">
+        <div class="first-sect">
+            <a href="#"><img class="footer_logo" src="Images/logo/Logo.png" alt="Foodlens logo"></a>
+            <ul class="footer">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Data Policy</a></li>
+            </ul>
+            <ul class="footer">
+                <li><a href="#">Legal</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <ul class="footer">
+                <li><a href="#">Follow Us</a></li>
+            </ul>
+        </div>
+        <div class="copy_right">
+            &copy;Copyright FoodLENS 2023
+            <div class="links">
+                <a href="#"><button id="socials"><img src="Images/logo/instagram.png" alt="instagram"></button></a>
+                <a href="#"><button id="socials"><img src="Images/logo/pinterest.png" alt="pinterest"></button></a>
+                <a href="#"><button id="socials"><img src="Images/logo/twitter.png" alt="twitter"></button></a>
+                <a href="#"><button id="socials"><img src="Images/logo/youtube.png" alt="youtube"></button></a>
+            </div>
+        </div>
+    </footer>
+    <!--
+    ==================== JavaScript File  ====================
+      -->
+  <script src="app/js/web-features.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+/*==========================================
+Footer Setup
+==========================================*/
+footer  {
+    background-color: var(--background-light-gray);
+    position: relative;
+
+    .first-sect {
+        @include Display-justify("flex", "space-evenly");
+        border-bottom: .1px solid rgb(219 219 219);
+        padding: 50px 0;
+
+        .footer_logo {
+            @include width-height ("110px", "100px");
+            border-radius: 50%;
+        }
+
+        .footer li:nth-child(1) {
+            font-size: 20px;
+        }
+
+        .footer li a {
+            line-height: 30px;
+            color: var(--text);
+            transition: .4s;
+
+            &:hover {
+                color: var(--cta);
+            }
+        }
+    }
+
+    .copy_right {
+        @include Display-align-justify("flex", "center", "space-between");
+        padding: 30px 40px;
+        color: var(--accent);
+
+        .links a:not(:last-child) {
+            padding: 0 15px 0 0;
+        }
+
+        .links {
+
+            #socials {
+                min-width: 40px;
+            }
+
+            img {
+                @include width-height("20px", "20px");
+                transition: .2s;
+
+                &:hover {
+                    transform: scale(.90);
+                    opacity: .6;
+                }
+            }
+        }
+    }
+}
+/*
+=========================================
+Mobile and Tab setup
+=========================================
+*/
+@media (max-width: 950px) {
+
+    footer {
+        .first-sect {
+            display: block;
+        }
+
+        .copy_right {
+            display: block;
+
+            .links {
+                margin-top: 30px;
+            }
+        }
+    }
+}

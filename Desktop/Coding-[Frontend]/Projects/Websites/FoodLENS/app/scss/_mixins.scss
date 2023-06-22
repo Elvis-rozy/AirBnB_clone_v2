@@ -1,0 +1,49 @@
+/*=====================================
+Mobile hide setup
+=====================================*/
+.hide-for-mobile {
+    @media (max-width: 950px) {
+        display: none;
+    }
+}
+/*=====================================
+Desktop hide setup
+=====================================*/
+.hide-for-desktop {
+    @media (min-width: 951px) {
+        display: none;
+    }
+}
+/*=====================================
+Flex setup
+=====================================*/
+@mixin Display-align-justify ($placement, $align, $justify) {
+    display: #{$placement};
+    align-items: #{$align};
+    justify-content: #{$justify};
+}
+
+@mixin Display-align ($placement, $align) {
+    display: #{$placement};
+    align-items: #{$align};
+}
+
+@mixin Display-justify ($placement, $justify) {
+    display: #{$placement};
+    justify-content: #{$justify};
+}
+/*=====================================
+Width-height setup
+=====================================*/
+@mixin width-height ($width, $height) {
+    width: #{$width};
+    height: #{$height};
+}
+/*=====================================
+Background Position setup
+=====================================*/
+@mixin background-size-position-repeat ($size, $position, $repeat) {
+    background-size: #{$size};
+    background-position: #{$position};
+    background-repeat: #{$repeat};
+}

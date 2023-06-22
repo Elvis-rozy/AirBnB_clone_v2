@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+    ==================== stylesheet  ====================
+        -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>FoodLENS-Login Page</title>
+</head>
+<body>
+    <!--
+    ==================== Header & Nav  ====================
+        -->
+    <header>
+        <nav>
+            <a href="index.html"><img class="header_logo" src="Images/logo/Logo.png" alt="Foodlens logo"></a>
+        </nav>
+    </header>
+        <!--
+    ==================== Form Section  ====================
+        -->
+    <section class="form">
+        <form id="login-form">
+            <h1 class="h1A">Login</h1>
+            <div class="input-box spec1">
+                <input class="input" type="email" id="email" name="email" required>
+                <label for="email">Username or Email</label>
+            </div>
+            <div class="input-box spec1">
+                <input class="input" type="password" id="password" name="password" required>
+                <label for="password">Password</label>
+            </div>
+            <div class="remember-forgot">
+                <label for="checkbox"><input type="checkbox">Remember me</label>
+                <a href="#">Forgot Password?</a>
+            </div>
+            <!--
+            ==================== Submit Button  ====================
+            -->
+            <button><input type="submit" class="login-btn" value="Login"></input></button>
+            <div class="register-link">
+                <p>Don't have an account? <a href="signup.html">Register</a></p>
+            </div>
+        </form>
+    </section>
+    <!--
+    ==================== JavaScript File  ====================
+    -->
+    <script src="app/js/web-features.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+/*=========================================
+Brands Setup
+=========================================*/
+.trust {
+    background: url("/Images/backgrounds/features-bg.png");
+    @include background-size-position-repeat ("contain", "center", "repeat");
+    @include Display-align-justify ("flex", "center", "center");
+    @include width-height ("100%", "100vh");
+    padding: 15vh 0 20px;
+    flex-direction: column;
+    overflow-x: hidden;
+    gap: 10px;
+
+    h3 {
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    .group {
+        @include width-height ("100%", "100px");
+        position: relative;
+    }
+
+    .brands {
+        animation: carousel 20s linear infinite;
+        position: absolute;
+        transition: .3s;
+        width: 200%;
+        display: flex;
+
+        &:hover {
+            animation-play-state: paused;
+        }
+
+        .set1, .set2 {
+            @include Display-align-justify ("flex", "center", "space-around");
+            width: 50%;
+        }
+
+        img {
+            @include width-height ("120px", "100px");
+            transition: .3s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .tools {
+
+        h3 {
+            padding-bottom: 30px;
+        }
+
+        .cards {
+            padding-bottom: 30px;
+            position: relative;
+            display: flex;
+            gap: 20px;
+
+            .card {
+                border: 1px solid rgb(225, 225, 225);
+                @include Display-align("flex", "center");
+                background: rgb(245, 245, 245);
+                flex-direction: column;
+                border-radius: 20px;
+                position: relative;
+                padding: 20px;
+                transition: .3s;
+                width: 250px;
+                gap: 10px;
+
+                &:hover {
+                    box-shadow: 1px 4px 6px rgb(153, 153, 153);
+                    transform: scale(1.1);
+                }
+
+                img {
+                    @include width-height ("80px", "80px");
+                }
+
+                h5 {
+                    font-weight: 500;
+                    font-size: 18px;
+                }
+
+                p {
+                    font-size: 13px;
+                }
+
+                a {
+                    color: var(--accent);
+                    font-size: 12px;
+                    transition: .3s;
+
+                    &:hover {
+                        color: var(--cta);
+                    }
+                }
+            }
+        }
+    }
+}
+/*=========================================
+Mobile and Tab setup
+=========================================*/
+@media (max-width: 950px) {
+
+    .trust {
+        height: auto;
+
+        .brands {
+            width: 350%;
+        }
+
+        .cards {
+            flex-direction: column;
+        }
+    }
+}

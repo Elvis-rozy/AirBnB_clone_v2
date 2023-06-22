@@ -1,0 +1,66 @@
+/*=========================================
+Hero Setup
+=========================================*/
+.screen {
+    @include Display-justify ("flex", "center");
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        filter: brightness(.7);
+        animation: slideshow 30s ease-in forwards infinite;
+        @include background-size-position-repeat ("cover", "center", "no-repeat");
+    }
+
+    h1 {
+        padding-bottom: 20px;
+        color: var(--white);
+        position: relative;
+        font-size: 52px;
+    }
+
+    p {
+        color: rgb(227 227 227);
+        padding-bottom: 40px;
+        position: relative;
+        font-size: 18px;
+    }
+
+    .bttn {
+        padding: 15px 50px;
+    }
+}
+ /*
+=========================================
+Mobile and Tab setup
+=========================================
+*/
+@media (max-width: 550px) {
+
+    .hero {
+
+        .screen {
+
+            h1 {
+                font-size: 24px;
+                margin: 0 10px;
+            }
+
+            p {
+                font-size: 14px;
+                margin: 0 10px;
+            }
+
+            .bttn {
+                padding: 7px 40px;
+            }
+        }
+    }
+}

@@ -1,0 +1,279 @@
+/*=========================================
+Dashboard Setup
+=========================================*/
+#head {
+    border-radius: 0 40px 40px 0;
+    width: 200px;
+}
+
+.dash-hero {
+    background: linear-gradient(to right, rgb(240, 240, 240),
+    rgb(143 141 141), rgb(215 213 213));
+    @include width-height ("100%", "100vh");
+    grid-template-columns: .6fr 1.1fr 1.2fr;
+    color: var(--text);
+    padding: 30px;
+    display: grid;
+    gap: 30px;
+
+    .left, .right, .middle {
+        flex-direction: column;
+    }
+
+    .left {
+        @include Display-align-justify ("flex", "center", "center");
+
+        .dash-pic {
+            @include width-height ("150px", "150px");
+            border-radius: 50% 30% 0 50%;
+        }
+
+        h2 {
+            background: rgb(128 128 128 / 7%);
+            color: rgb(223 146 87);
+            margin-bottom: 30px;
+            border-radius: 10px;
+            font-weight: 300;
+            font-size: 34px;
+            padding: 10px;
+        }
+
+        .bars {
+            flex-direction: column;
+            display: flex;
+            width: 60%;
+            gap: 30px;
+
+            button {
+                min-width: 100%;
+                transition: .3s;
+
+                &.Active {
+                    background: rgba(0, 0, 84, 0.43);
+                    transform: scale(1.2);
+                    color: var(--white);
+
+                    &:hover {
+                        box-shadow: 2px 3px 8px rgb(100 99 99);
+                        background: rgba(0, 0, 84, 0.43);
+                        transform: scale(1.2);
+                        color: var(--white);
+                    }
+                }
+            }
+        }
+    }
+
+    .middle {
+        @include Display-align-justify ("flex", "center", "center");
+
+        img {
+            box-shadow: -20px 20px 8px rgb(118, 117, 117);
+            @include width-height ("100%", "70vh");
+            border-radius: 50% 30% 0 50%;
+        }
+    }
+
+    .right {
+        @include Display-align-justify ("flex", "center", "center");
+
+        .profile-details {
+            @include Display-align-justify ("flex", "start", "center");
+            flex-direction: column;
+            margin-top: 60px;
+            position: relative;
+            transition: 1s;
+            width: 100%;
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h5 {
+                margin: 10px 0 6px;
+                font-size: 18px;
+            }
+
+            .mail {
+                color: rgba(0, 0, 84, 0.43);
+                font-size: 13px;
+            }
+
+            p {
+                text-align: start;
+            }
+
+            table {
+                border-collapse: collapse;
+                margin-top: 10px;
+
+                th {
+                    border: 1px solid #dbdbdb;
+                    padding: 8px 20px;
+                }
+
+                td {
+                    border-bottom: 1px solid #dbdbdb;
+                    padding: 5px 15px;
+                    text-align: start;
+                }
+
+                #percen {
+                    text-align: center;
+                }
+            }
+        }
+
+        .profile-edit {
+            background: linear-gradient(45deg, rgb(75 75 126), rgb(247 172 114));
+            flex-direction: column;
+            border-radius: 0 20px;
+            position: absolute;
+            padding: 20px;
+            transition: 1s;
+            display: flex;
+            gap: 20px;
+
+            .personal-info, .diet-comp, .tolerance, .meal-info {
+                flex-direction: column;
+                display: flex;
+            }
+
+            .personal-info, .tolerance {
+                gap: 20px;
+            }
+
+            .diet-comp {
+                gap: 10px;
+            }
+
+            .meal-info {
+                gap: 40px;
+            }
+
+            .input-box {
+                position: relative;
+                width: 350px;
+
+                label {
+                    transform: translateY(-50%);
+                    color: rgb(211 211 211);
+                    pointer-events: none;
+                    position: absolute;
+                    font-size: 12px;
+                    transition: .3s;
+                    left: 10px;
+                    top: -8px;
+                }
+
+                input {
+                    @include width-height ("100%", "30px");
+                    border: 1px solid rgb(223 218 218);
+                    color: rgb(211 211 211);
+                    background: transparent;
+                    padding: 0 20px 0 20px;
+                    border-radius: 5px;
+                    text-align: start;
+                    font-size: 15px;
+                    outline: none;
+
+                    &::placeholder {
+                        color: rgb(202, 201, 201);
+                        font-size: 12px;
+                    }
+                }
+
+                #percents-label {
+                    transform: translateY(-50%);
+                    top: 50%;
+                }
+
+                .percents {
+                    text-align: center;
+                    width: 30px;
+                    padding: 0;
+                }
+            }
+        }
+
+        .profile-submit {
+            @extend button ;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 950px) {
+
+    .dash-hero {
+        grid-template-columns: .7fr 1.3fr;
+
+        .middle {
+            display: none;
+        }
+    }
+
+    #head {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    @media (max-width: 550px) {
+
+        .dash-hero {
+            @include Display-align ("flex", "start");
+            padding: 10vh 20px 30px;
+            flex-direction: column;
+
+            .left {
+                flex-direction: row;
+
+                h2 {
+                    margin-bottom: 0;
+                    font-size: 34px;
+                }
+
+                .dash-pic {
+                    @include width-height ("100px", "100px");
+                }
+
+                .bars {
+                    display: none;
+                }
+            }
+
+            .right {
+                justify-content: start;
+                width: 100%;
+
+                .profile-details {
+                    margin-top: 0;
+                }
+
+                .profile-edit {
+                   @include width-height ("100%", "100vh");
+                    align-items: center;
+                    border-radius: 0;
+                    top: 10vh;
+                }
+
+                .profile-submit {
+                    min-width: 300px;
+                }
+            }
+        }
+
+        footer .copy_right {
+            padding: 30px 10px;
+        }
+    }
+}
+
+.invisible {
+    filter: blur(50px);
+    transform: translateX(200%);
+}
+
+.visible {
+    transform: translateX(0);
+}

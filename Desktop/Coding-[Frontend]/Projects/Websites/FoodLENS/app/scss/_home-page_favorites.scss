@@ -1,0 +1,84 @@
+#favorites {
+    @include Display-align-justify ("flex", "center", "center");
+    @include width-height ("100%", "100vh");
+    flex-direction: column;
+
+    h3 {
+        margin-bottom: 20px;
+        font-weight: 700;
+        color: var(--text);
+        font-size: 22px;
+    }
+
+    .favs {
+        overscroll-behavior-inline: contain;
+        grid-auto-columns: 36%;
+        grid-auto-flow: column;
+        overflow-x: auto;
+        padding: 30px;
+        display: grid;
+        gap: 30px;
+
+        .fav {
+            @include Display-align-justify ("flex", "start", "center");
+            background-color: rgb(50 50 56 / 25%);
+            flex-direction: column;
+            border-radius: 10px;
+            overflow: hidden;
+
+            #fav1 {
+                @include width-height ("100%", "250px");
+                transition: .3s;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+
+            h4 {
+                margin: 20px 0 0 10px;
+            }
+
+            .ratings {
+                @include Display-align-justify ("flex", "center", "center");
+                margin : 10px 0 20px 10px;
+                gap: 3px;
+
+                img {
+                    @include width-height ("10px", "10px");
+                }
+
+                p {
+                    margin-left: 30px;
+                    font-size: 12.5px;
+                    color: var(--text)
+                }
+            }
+        }
+    }
+}
+
+.snaps-inline {
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 30px;
+}
+
+.snaps-inline > * {
+    scroll-snap-align: start;
+}
+/*
+=========================================
+Mobile and Tab setup
+=========================================
+*/
+@media (max-width: 950px) {
+
+    #favorites {
+        padding: 13vh 0;
+        height: auto;
+
+        .favs {
+            grid-auto-columns: 86%;
+        }
+    }
+}

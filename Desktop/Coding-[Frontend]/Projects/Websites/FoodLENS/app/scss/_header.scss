@@ -1,0 +1,83 @@
+header {
+    background: url("/Images/backgrounds/header-bg.png");
+    @include background-size-position-repeat ("cover", "center", "no-repeat");
+    box-shadow: 1px 1px 6px rgb(153, 153, 153);
+    @include width-height ("100vw", "auto");
+    position: fixed;
+    z-index: 5;
+
+    nav {
+        @include Display-align-justify ("flex", "center", "space-between");
+        @include width-height ("100%", "12.7vh");
+        padding: 1.25rem 2.5rem;
+
+        .header_logo {
+            @include width-height ("110px", "100px");
+            border-radius: 50%;
+        }
+
+        ul {
+            display: flex;
+
+            li:not(:last-child) {
+                margin-right: 30px;
+            }
+
+            li {
+                position: relative;
+
+                a {
+                    @include Display-justify ("flex", "center");
+                    color: rgb(203 203 203);
+                    font-size: 15px;
+                    transition: .3s;
+
+                    &::before{
+                        content: "";
+                        @include width-height ("6px", "6px");
+                        background: var(--cta);
+                        transition: opacity .3s;
+                        border-radius: 50%;
+                        position: absolute;
+                        display: block;
+                        bottom: -80%;
+                        opacity: 0;
+                    }
+                    &:hover::before {
+                        opacity: 1;
+                    }
+
+                    &:hover {
+                        color: var(--cta);
+                    }
+                }
+            }
+        }
+
+        .btns {
+            display: flex;
+            gap: 20px;
+        }
+    }
+}
+/*
+=========================================
+Mobile and Tab setup
+=========================================
+*/
+@media (max-width: 950px) {
+
+    header {
+        @include width-height ("100vw", "auto");
+
+        nav {
+            @include width-height ("100%", "10vh");
+            padding: 10px 20px;
+
+            .header_logo {
+                @include width-height ("60px", "60px");
+                margin-top: 10px;
+            }
+        }
+    }
+}

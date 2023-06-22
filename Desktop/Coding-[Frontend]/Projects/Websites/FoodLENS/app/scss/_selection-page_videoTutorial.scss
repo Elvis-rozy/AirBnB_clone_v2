@@ -1,0 +1,23 @@
+.video-tutorial {
+    @include Display-align("flex", "center");
+    flex-direction: column;
+    padding: 30px 0;
+
+    h3 {
+        padding-bottom: 30px;
+    }
+
+    .video {
+        @include width-height ("800px", "350px");
+        position: relative;
+        transition: .3s;
+
+        &:hover {
+            filter: brightness(.7);
+        }
+    }
+
+    h4 {
+        padding: 10px 0;
+    }
+}
