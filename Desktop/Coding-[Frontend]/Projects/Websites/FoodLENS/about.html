@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>FoodLENS-About-page</title>
 </head>
-<body>
+<body id="body">
     <!--
     ==================== Header & Nav  ====================
     -->
@@ -17,10 +17,10 @@
         <nav>
             <a href="home.html"><img class="header_logo" src="Images/logo/Logo.png" alt="Foodlens logo"></a>
             <ul>
-                <li class="hide-for-mobile"><a href="home.html">Home</a></li>
-                <li class="hide-for-mobile"><a href="home.html#categories">Categories</a></li>
-                <li class="hide-for-mobile"><a href="home.html#favorites">Favorites</a></li>
-                <li class="hide-for-mobile"><a href="blog.html">Blog</a></li>
+                <li class="hide-for-mobile"><a class="link1" href="home.html">Home</a></li>
+                <li class="hide-for-mobile"><a class="link2" href="categories.html">Categories</a></li>
+                <li class="hide-for-mobile"><a class="link4" href="#">Blog</a></li>
+                <li class="hide-for-mobile"><a class="link5" href="#contact">Contact</a></li>
             </ul>
             <a class="hide-for-mobile profile" href="dashboard.html"><img src="Images/logo/profile.png" alt="profile icon"></a>
             <!--
@@ -38,9 +38,9 @@
                 <ul class="lnk">
                     <li class="hide-for-desktop lnk"><a href="home.html">Home</a></li><!--
                 --><li class="hide-for-desktop lnk"><a href="dashboard.html">Profile</a></li> <!--
-                --><li class="hide-for-desktop lnk"><a href="home.html#categories">Categories</a></li> <!--
-                --><li class="hide-for-desktop lnk"><a href="home.html#favorites">Favorites</a></li> <!--
-                --><li class="hide-for-desktop lnk"><a href="blog.html">Blog</a></li>
+                --><li class="hide-for-desktop lnk"><a href="categories.html">Categories</a></li> <!--
+                --><li class="hide-for-desktop lnk"><a href="#">Blog</a></li> <!--
+                --><li class="hide-for-desktop lnk"><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -117,34 +117,69 @@
       -->
       <footer id="contact">
         <div class="first-sect">
-            <a href="#"><img class="footer_logo" src="Images/logo/Logo.png" alt="Foodlens logo"></a>
+            <div class="logo-box">
+                <a href="#"><img class="footer_logo" src="Images/logo/Logo.png" alt="Foodlens logo"></a>
+                <ul class="footer mode">
+                    <li>Love our work?</li>
+                    <li>Contact us >></li>
+                    <li id="toggle-mode">Dark/Light mode</li>
+                </ul>
+            </div>
             <ul class="footer">
-                <li><a href="#">Help</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Data Policy</a></li>
+                <li>Elvis Oguoma O.</li>
+                <li><a href="#"><button id="socials">
+                    <img src="Images/logo/whatsapp.png" alt="whatsapp">
+                </button>Whatsapp</a></li>
+                <li><a href="#"><button id="socials">
+                    <img src="Images/logo/linkedin.png" alt="linkedin">
+                </button>Linkedin</a></li>
+                <li><a href="#"><button id="socials">
+                    <img src="Images/logo/twitter.png" alt="twitter">
+                </button>Twitter</a></li>
+                <li><a href="elvisrozy52@gmail.com"><button id="socials">
+                    <img src="Images/logo/gmail.png" alt="gmail">
+                </button>Gmail</a></li>
             </ul>
             <ul class="footer">
-                <li><a href="#">Legal</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
+                <li>Aralu Kenechukwu C.</li>
+                <li><a href="#"><button id="socials">
+                    <img src="Images/logo/whatsapp.png" alt="whatsapp">
+                </button>Whatsapp</a></li>
+                <li><a href="#"><button id="socials">
+                    <img src="Images/logo/linkedin.png" alt="linkedin">
+                </button>Linkedin</a></li>
+                <li><a href="#"><button id="socials">
+                    <img src="Images/logo/twitter.png" alt="twitter">
+                </button>Twitter</a></li>
+                <li><a href="junioraralu@gmail.com"><button id="socials">
+                    <img src="Images/logo/gmail.png" alt="gmail">
+                </button>Gmail</a></li>
             </ul>
             <ul class="footer">
-                <li><a href="#">Follow Us</a></li>
+                <li>Aweda Ifeoluwa</li>
+                <li><a href="#"><button id="socials">
+                    <img src="Images/logo/whatsapp.png" alt="whatsapp">
+                </button>Whatsapp</a></li>
+                <li><a href="#"><button id="socials">
+                    <img src="Images/logo/linkedin.png" alt="linkedin">
+                </button>Linkedin</a></li>
+                <li><a href="#"><button id="socials">
+                    <img src="Images/logo/twitter.png" alt="twitter">
+                </button>Twitter</a></li>
+                <li><a href="ifeI1939@gmail.com"><button id="socials">
+                    <img src="Images/logo/gmail.png" alt="gmail">
+                </button>Gmail</a></li>
             </ul>
         </div>
         <div class="copy_right">
             &copy;Copyright FoodLENS 2023
-            <div class="links">
-                <a href="#"><button id="socials"><img src="Images/logo/instagram.png" alt="instagram"></button></a>
-                <a href="#"><button id="socials"><img src="Images/logo/pinterest.png" alt="pinterest"></button></a>
-                <a href="#"><button id="socials"><img src="Images/logo/twitter.png" alt="twitter"></button></a>
-                <a href="#"><button id="socials"><img src="Images/logo/youtube.png" alt="youtube"></button></a>
-            </div>
+            <a href="#">Back to top</a>
         </div>
     </footer>
     <!--
     ==================== JavaScript File  ====================
       -->
-    <script src="app/js/web-features.js"></script>
+    <script src="app/js/globals.js"></script>
+    <script src="app/js/header.js"></script>
 </body>
 </html>

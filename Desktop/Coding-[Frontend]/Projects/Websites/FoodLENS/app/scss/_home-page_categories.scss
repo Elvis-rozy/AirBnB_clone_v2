@@ -16,17 +16,25 @@
         display: grid;
         gap: 20px;
 
-        span {
+        a {
             @include background-size-position-repeat ("cover", "center", "no-repeat");
             @include Display-align-justify ("flex", "center", "center");
             @include width-height ("300px", "200px");
             position: relative;
             cursor: pointer;
 
-            h6 {
+            span {
+                font-weight: 700;
                 position: relative;
                 color: var(--cta);
                 font-size: 22px;
+
+            }
+
+            &:hover  {
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.62);
+                transform: scale(1.03);
+                transition: .3s;
             }
 
             &::before{
@@ -38,6 +46,7 @@
                 position: absolute;
                 filter: brightness(.6);
                 @include background-size-position-repeat ("cover", "center", "no-repeat");
+
             }
 
             &:first-child {
@@ -64,9 +73,15 @@
                 }
             }
 
-            &:last-child {
+            &:nth-child(5) {
                 &::before {
                     background-image: url('/Images/backgrounds/cat-fruits.jpg');
+                }
+            }
+
+            &:last-child {
+                &::before {
+                    background-image: url('/Images/backgrounds/cat-vegan.jpg');
                 }
             }
         }
@@ -88,7 +103,7 @@ Mobile and Tab setup
 
         @media (max-width: 550px) {
 
-                span {
+                a {
                     @include width-height ("160px", "100px");
                 }
             }

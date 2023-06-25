@@ -60,6 +60,14 @@ header {
         }
     }
 }
+
+.nav-active {
+    color: var(--cta);
+
+    &::before {
+        opacity: 1;
+    }
+}
 /*
 =========================================
 Mobile and Tab setup

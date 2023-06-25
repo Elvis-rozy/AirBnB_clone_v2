@@ -1,6 +1,14 @@
 /*==========================================
 Footer Setup
 ==========================================*/
+#toggle-mode {
+    cursor: pointer;
+
+    &:hover {
+        color: var(--cta);
+    }
+}
+
 footer  {
     background-color: var(--background-light-gray);
     position: relative;
@@ -15,14 +23,37 @@ footer  {
             border-radius: 50%;
         }
 
+        .footer {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            li {
+                text-align: start;
+            }
+        }
+
         .footer li:nth-child(1) {
             font-size: 20px;
         }
 
         .footer li a {
-            line-height: 30px;
             color: var(--text);
             transition: .4s;
+            display: flex;
+            align-items: center;
+
+            button {
+                min-width: 30px;
+                min-height: 30px;
+                border-radius: 50%;
+                margin-right: 20px;
+                box-shadow: none;
+
+                img {
+                    @include width-height("18px", "18px");
+                }
+            }
 
             &:hover {
                 color: var(--cta);
@@ -35,25 +66,8 @@ footer  {
         padding: 30px 40px;
         color: var(--accent);
 
-        .links a:not(:last-child) {
-            padding: 0 15px 0 0;
-        }
-
-        .links {
-
-            #socials {
-                min-width: 40px;
-            }
-
-            img {
-                @include width-height("20px", "20px");
-                transition: .2s;
-
-                &:hover {
-                    transform: scale(.90);
-                    opacity: .6;
-                }
-            }
+        a {
+            color: var(--accent);
         }
     }
 }
@@ -66,15 +80,18 @@ Mobile and Tab setup
 
     footer {
         .first-sect {
-            display: block;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+
+            .footer {
+                align-items: center;
+            }
         }
 
         .copy_right {
-            display: block;
-
-            .links {
-                margin-top: 30px;
-            }
+            gap: 30px;
+            flex-direction: column;
         }
     }
 }

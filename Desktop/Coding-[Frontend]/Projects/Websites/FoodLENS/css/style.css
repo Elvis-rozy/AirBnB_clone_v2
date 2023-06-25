@@ -62,21 +62,59 @@ body {
 }
 
 /*=========================================
+Dark mode/ Light mode Styles
+=========================================*/
+.light-mode {
+  background: linear-gradient(45deg, rgba(118, 0, 93, 0.6), #ff7bb8, rgba(118, 0, 93, 0.6), #9760c9, rgba(149, 147, 255, 0.6784313725));
+  color: #333;
+}
+
+/*=========================================
 Button Styles
 =========================================*/
+/* button {
+    min-width: 100px;
+    min-height: 38px;
+    background: #e7e7e7;
+    box-shadow: 4px 4px 12px #262626;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    color: #0d0d25;
+    text-transform: capitalize;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    outline: none !important;
+    transition: .3s;
+    font-weight: 700;
+    overflow: hidden;
+    position: relative;
+
+    &:hover {
+        color: var(--cta);
+        transform: scale(.97);
+        border-color: #0d0d25;
+        box-shadow: inset 9px 9px 12px #cccccc, inset -9px -9px 12px #ffffff;
+    }
+}
+ */
 button, .dash-hero .right .profile-submit, header .profile, .form .login-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  color: rgb(203, 203, 203);
-  font-weight: 700;
-  min-width: 100px;
-  min-height: 40px;
-  cursor: pointer;
-  background: rgba(8, 8, 22, 0.65);
-  overflow: hidden;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.62);
+  background: rgba(28, 9, 74, 0.651);
+  color: rgb(203, 203, 203);
+  border-radius: 30px;
+  min-width: 100px;
+  font-weight: 700;
+  overflow: hidden;
+  min-height: 40px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
 }
 button::before, .dash-hero .right .profile-submit::before, header .profile::before, .form .login-btn::before {
   content: "";
@@ -302,62 +340,39 @@ Hero Image Slideshow Animation
 =========================================*/
 @keyframes slideshow {
   0% {
-    background-image: url("/Images/backgrounds/hero-bg.jpg");
-  }
-  20% {
-    background-image: url("/Images/backgrounds/hero-bg.jpg");
-  }
-  25% {
-    background-image: url("/Images/backgrounds/hero-bg2.jpg");
-  }
-  45% {
-    background-image: url("/Images/backgrounds/hero-bg2.jpg");
-  }
-  50% {
-    background-image: url("/Images/backgrounds/hero-bg3.jpg");
-  }
-  70% {
-    background-image: url("/Images/backgrounds/hero-bg3.jpg");
-  }
-  75% {
-    background-image: url("/Images/backgrounds/hero-bg4.jpg");
-  }
-  95% {
-    background-image: url("/Images/backgrounds/hero-bg4.jpg");
-  }
-  100% {
-    background-image: url("/Images/backgrounds/hero-bg.jpg");
-  }
-}
-@keyframes slideshow2 {
-  0% {
     background-image: url("/Images/backgrounds/bgA.jpg");
   }
   5% {
     background-image: url("/Images/backgrounds/bgB.jpg");
   }
-  20% {
+  15% {
     background-image: url("/Images/backgrounds/bgB.jpg");
   }
-  25% {
+  20% {
+    background-image: url("/Images/backgrounds/bgC.jpg");
+  }
+  35% {
     background-image: url("/Images/backgrounds/bgC.jpg");
   }
   40% {
-    background-image: url("/Images/backgrounds/bgC.jpg");
+    background-image: url("/Images/backgrounds/bgD.jpg");
   }
-  45% {
+  55% {
     background-image: url("/Images/backgrounds/bgD.jpg");
   }
   60% {
-    background-image: url("/Images/backgrounds/bgD.jpg");
+    background-image: url("/Images/backgrounds/bgE.jpg");
   }
-  65% {
+  75% {
     background-image: url("/Images/backgrounds/bgE.jpg");
   }
   80% {
-    background-image: url("/Images/backgrounds/bgE.jpg");
+    background-image: url("/Images/backgrounds/bgF.jpg");
   }
-  85% {
+  90% {
+    background-image: url("/Images/backgrounds/bgF.jpg");
+  }
+  95% {
     background-image: url("/Images/backgrounds/bgA.jpg");
   }
   100% {
@@ -458,6 +473,13 @@ header nav .btns {
   gap: 20px;
 }
 
+.nav-active {
+  color: var(--cta);
+}
+.nav-active::before {
+  opacity: 1;
+}
+
 /*
 =========================================
 Mobile and Tab setup
@@ -496,8 +518,8 @@ Hero Setup
   left: 0;
   right: 0;
   bottom: 0;
-  filter: brightness(0.7);
-  animation: slideshow 30s ease-in forwards infinite;
+  filter: brightness(0.6);
+  animation: slideshow 50s ease-in forwards infinite;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -539,6 +561,13 @@ Mobile and Tab setup
 /*==========================================
 Footer Setup
 ==========================================*/
+#toggle-mode {
+  cursor: pointer;
+}
+#toggle-mode:hover {
+  color: var(--cta);
+}
+
 footer {
   background-color: var(--background-light-gray);
   position: relative;
@@ -554,13 +583,33 @@ footer .first-sect .footer_logo {
   height: 100px;
   border-radius: 50%;
 }
+footer .first-sect .footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+footer .first-sect .footer li {
+  text-align: start;
+}
 footer .first-sect .footer li:nth-child(1) {
   font-size: 20px;
 }
 footer .first-sect .footer li a {
-  line-height: 30px;
   color: var(--text);
   transition: 0.4s;
+  display: flex;
+  align-items: center;
+}
+footer .first-sect .footer li a button, footer .first-sect .footer li a .dash-hero .right .profile-submit, .dash-hero .right footer .first-sect .footer li a .profile-submit, footer .first-sect .footer li a header .profile, header footer .first-sect .footer li a .profile, footer .first-sect .footer li a .form .login-btn, .form footer .first-sect .footer li a .login-btn {
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 50%;
+  margin-right: 20px;
+  box-shadow: none;
+}
+footer .first-sect .footer li a button img, footer .first-sect .footer li a .dash-hero .right .profile-submit img, .dash-hero .right footer .first-sect .footer li a .profile-submit img, footer .first-sect .footer li a header .profile img, header footer .first-sect .footer li a .profile img, footer .first-sect .footer li a .form .login-btn img, .form footer .first-sect .footer li a .login-btn img {
+  width: 18px;
+  height: 18px;
 }
 footer .first-sect .footer li a:hover {
   color: var(--cta);
@@ -572,20 +621,8 @@ footer .copy_right {
   padding: 30px 40px;
   color: var(--accent);
 }
-footer .copy_right .links a:not(:last-child) {
-  padding: 0 15px 0 0;
-}
-footer .copy_right .links #socials {
-  min-width: 40px;
-}
-footer .copy_right .links img {
-  width: 20px;
-  height: 20px;
-  transition: 0.2s;
-}
-footer .copy_right .links img:hover {
-  transform: scale(0.9);
-  opacity: 0.6;
+footer .copy_right a {
+  color: var(--accent);
 }
 
 /*
@@ -595,13 +632,16 @@ Mobile and Tab setup
 */
 @media (max-width: 950px) {
   footer .first-sect {
-    display: block;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  footer .first-sect .footer {
+    align-items: center;
   }
   footer .copy_right {
-    display: block;
-  }
-  footer .copy_right .links {
-    margin-top: 30px;
+    gap: 30px;
+    flex-direction: column;
   }
 }
 /*=========================================
@@ -999,11 +1039,9 @@ Mobile and Tab setup
 /*=========================================
 Login page Styles
 =========================================*/
-/*
-=========================================
+/*=========================================
 Login Form setup
-=========================================
-*/
+=========================================*/
 .form {
   display: flex;
   align-items: center;
@@ -1041,9 +1079,16 @@ Login Form setup
   margin-bottom: 45px;
 }
 .form .input-box {
+  display: flex;
+  align-items: center;
   border-bottom: 2px solid var(--white);
   border-radius: 20px;
   width: 400px;
+}
+.form .input-box img {
+  margin-right: 20px;
+  cursor: pointer;
+  width: 20px;
 }
 .form .input-box label {
   transform: translateY(-50%);
@@ -1088,6 +1133,7 @@ Login Form setup
 }
 .form button, .form .dash-hero .right .profile-submit, .dash-hero .right .form .profile-submit, .form header .profile, header .form .profile, .form .login-btn {
   min-width: 100%;
+  min-height: 45px;
 }
 .form .register-link {
   margin: 25px 0 10px;
@@ -1154,8 +1200,8 @@ header .profile img {
   left: 0;
   right: 0;
   bottom: 0;
-  filter: brightness(0.7);
-  animation: slideshow2 30s ease-in forwards infinite;
+  filter: brightness(0.6);
+  animation: slideshow 50s ease-in forwards infinite;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1226,7 +1272,7 @@ Mobile and Tab setup
   display: grid;
   gap: 20px;
 }
-#categories .boxes span {
+#categories .boxes a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1238,12 +1284,18 @@ Mobile and Tab setup
   position: relative;
   cursor: pointer;
 }
-#categories .boxes span h6 {
+#categories .boxes a span {
+  font-weight: 700;
   position: relative;
   color: var(--cta);
   font-size: 22px;
 }
-#categories .boxes span::before {
+#categories .boxes a:hover {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.62);
+  transform: scale(1.03);
+  transition: 0.3s;
+}
+#categories .boxes a::before {
   content: "";
   top: 0;
   left: 0;
@@ -1255,20 +1307,23 @@ Mobile and Tab setup
   background-position: center;
   background-repeat: no-repeat;
 }
-#categories .boxes span:first-child::before {
+#categories .boxes a:first-child::before {
   background-image: url("/Images/backgrounds/cat-all.jpg");
 }
-#categories .boxes span:nth-child(2)::before {
+#categories .boxes a:nth-child(2)::before {
   background-image: url("/Images/backgrounds/cat-starch.jpg");
 }
-#categories .boxes span:nth-child(3)::before {
+#categories .boxes a:nth-child(3)::before {
   background-image: url("/Images/backgrounds/cat-meat.jpg");
 }
-#categories .boxes span:nth-child(4)::before {
+#categories .boxes a:nth-child(4)::before {
   background-image: url("/Images/backgrounds/cat-pastries.jpg");
 }
-#categories .boxes span:last-child::before {
+#categories .boxes a:nth-child(5)::before {
   background-image: url("/Images/backgrounds/cat-fruits.jpg");
+}
+#categories .boxes a:last-child::before {
+  background-image: url("/Images/backgrounds/cat-vegan.jpg");
 }
 
 /*
@@ -1286,7 +1341,7 @@ Mobile and Tab setup
   }
 }
 @media (max-width: 950px) and (max-width: 550px) {
-  #categories .boxes span {
+  #categories .boxes a {
     width: 160px;
     height: 100px;
   }
@@ -1747,7 +1802,7 @@ header nav .search-form img {
   padding-bottom: 30px;
 }
 .video-tutorial .video {
-  width: 800px;
+  width: 850px;
   height: 350px;
   position: relative;
   transition: 0.3s;
@@ -1860,7 +1915,7 @@ header {
   position: fixed;
   border-bottom: 1px solid rgba(189, 188, 188, 0.32);
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   align-items: center;
   width: 100%;
   background: white;
@@ -1881,13 +1936,13 @@ header {
 .categories .group {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  padding: 25vh 30px 50px;
-  gap: 20px;
+  padding: 25vh 50px 50px;
+  gap: 30px;
 }
 .categories .group .pod {
   background: white;
   width: 100%;
-  height: 150px;
+  height: 180px;
   position: relative;
   transition: 0.3s;
 }

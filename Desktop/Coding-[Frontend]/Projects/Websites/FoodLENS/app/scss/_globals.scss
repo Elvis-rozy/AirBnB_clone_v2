@@ -31,19 +31,59 @@ body {
     position: relative;
 }
 /*=========================================
+Dark mode/ Light mode Styles
+=========================================*/
+.light-mode {
+    background: linear-gradient(45deg, #76005d99,
+     #ff7bb8, #76005d99, #9760c9, #9593ffad);
+    color: #333;
+  }
+
+/*=========================================
 Button Styles
 =========================================*/
+
+/* button {
+    min-width: 100px;
+    min-height: 38px;
+    background: #e7e7e7;
+    box-shadow: 4px 4px 12px #262626;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    color: #0d0d25;
+    text-transform: capitalize;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    outline: none !important;
+    transition: .3s;
+    font-weight: 700;
+    overflow: hidden;
+    position: relative;
+
+    &:hover {
+        color: var(--cta);
+        transform: scale(.97);
+        border-color: #0d0d25;
+        box-shadow: inset 9px 9px 12px #cccccc, inset -9px -9px 12px #ffffff;
+    }
+}
+ */
 button {
     @include Display-align-justify ("inline-flex", "center", "center");
-    position: relative;
-    color: rgb(203 203 203);
-    font-weight: 700;
-    min-width: 100px;
-    min-height: 40px;
-    cursor: pointer;
-    background: rgb(8 8 22 / 65%);
-    overflow: hidden;
     box-shadow: 0 5px 5px rgba(0, 0, 0, .62);
+    background: rgba(28, 9, 74, 0.651);
+    color: rgb(203 203 203);
+    border-radius: 30px;
+    min-width: 100px;
+    font-weight: 700;
+    overflow: hidden;
+    min-height: 40px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
 
     &::before {
         content: '';
@@ -133,6 +173,7 @@ button {
         color: var(--cta);
     }
 }
+
 /*=========================================
 Mobile menu Styles
 =========================================*/

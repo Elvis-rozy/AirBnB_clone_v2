@@ -8,7 +8,7 @@
     }
 
     .video {
-        @include width-height ("800px", "350px");
+        @include width-height ("850px", "350px");
         position: relative;
         transition: .3s;
 

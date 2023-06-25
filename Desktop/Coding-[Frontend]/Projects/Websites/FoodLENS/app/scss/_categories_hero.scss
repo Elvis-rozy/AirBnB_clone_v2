@@ -9,7 +9,7 @@ header {
         position: fixed;
         border-bottom: 1px solid rgba(189, 188, 188, 0.32);
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(6, 1fr);
         align-items: center;
         width: 100%;
         background: white;
@@ -33,13 +33,13 @@ header {
     .group {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        padding: 25vh 30px 50px;
-        gap: 20px;
+        padding: 25vh 50px 50px;
+        gap: 30px;
 
         .pod {
             background: white;
             width: 100%;
-            height: 150px;
+            height: 180px;
             position: relative;
             transition: .3s;
 

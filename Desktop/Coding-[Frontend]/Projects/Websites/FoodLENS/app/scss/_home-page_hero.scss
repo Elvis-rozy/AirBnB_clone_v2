@@ -21,8 +21,8 @@ header .profile {
         left: 0;
         right: 0;
         bottom: 0;
-        filter: brightness(.7);
-        animation: slideshow2 30s ease-in forwards infinite;
+        filter: brightness(.6);
+        animation: slideshow 50s ease-in forwards infinite;
         @include background-size-position-repeat ("cover", "center", "no-repeat");
     }
 

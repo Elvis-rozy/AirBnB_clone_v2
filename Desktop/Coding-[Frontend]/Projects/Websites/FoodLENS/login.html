@@ -22,14 +22,19 @@
     ==================== Form Section  ====================
         -->
     <section class="form">
-        <form id="login-form">
+        <form id="form">
             <h1 class="h1A">Login</h1>
             <div class="input-box spec1">
-                <input class="input" type="email" id="email" name="email" required>
+                <input id="email" type="email" name="email">
                 <label for="email">Username or Email</label>
             </div>
             <div class="input-box spec1">
-                <input class="input" type="password" id="password" name="password" required>
+                <input id="token" type="text" name="token">
+                <label for="token">Token</label>
+            </div>
+            <div class="input-box spec1">
+                <input id="password" type="password" name="password">
+                <img id="eyeicon" src="Images/logo/eye-close.png" alt="">
                 <label for="password">Password</label>
             </div>
             <div class="remember-forgot">
@@ -48,6 +53,6 @@
     <!--
     ==================== JavaScript File  ====================
     -->
-    <script src="app/js/web-features.js"></script>
+    <script src="app/js/login.js"></script>
 </body>
 </html>
