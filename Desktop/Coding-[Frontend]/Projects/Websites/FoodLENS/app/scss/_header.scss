@@ -11,9 +11,14 @@ header {
         @include width-height ("100%", "12.7vh");
         padding: 1.25rem 2.5rem;
 
-        .header_logo {
-            @include width-height ("110px", "100px");
-            border-radius: 50%;
+        .logo {
+            @include Display-align ("flex", "center");
+            flex-direction: column;
+            color: rgb(65 53 96);
+
+            img {
+                @include width-height ("70px", "50px");
+            }
         }
 
         ul {
@@ -80,7 +85,10 @@ Mobile and Tab setup
 
         nav {
             @include width-height ("100%", "10vh");
-            padding: 10px 20px;
+
+            @media (max-width: 550px) {
+                padding: 10px 20px;
+            }
 
             .header_logo {
                 @include width-height ("60px", "60px");

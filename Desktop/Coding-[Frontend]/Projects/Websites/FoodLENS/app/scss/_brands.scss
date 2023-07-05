@@ -57,14 +57,14 @@ Brands Setup
             padding-bottom: 30px;
             position: relative;
             display: flex;
-            gap: 20px;
+            gap: 30px;
 
             .card {
                 border: 1px solid rgb(225, 225, 225);
                 @include Display-align("flex", "center");
                 background: rgb(245, 245, 245);
                 flex-direction: column;
-                border-radius: 20px;
+                border-radius: 3px;
                 position: relative;
                 padding: 20px;
                 transition: .3s;

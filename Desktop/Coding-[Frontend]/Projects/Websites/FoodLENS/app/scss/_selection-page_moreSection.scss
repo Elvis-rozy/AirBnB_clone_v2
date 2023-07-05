@@ -9,11 +9,11 @@
 
     .more-card {
         background: #8080801a;
-        border-radius: 10px;
+        border-radius: 3px;
         overflow: hidden;
 
         img {
-            @include width-height ("100%", "250px");
+            @include width-height ("100%", "220px");
         }
 
         h5 {

@@ -30,10 +30,10 @@ linK.addEventListener('click', () => {
 /*============================================
 Dark mode / Light mode setup
 ============================================*/
-const body = document.querySelector("#body");
+const body = document.querySelector("body");
 const toggleBtn = document.getElementById("toggle-mode");
 
 toggleBtn.addEventListener("click", function() {
-    body.classList.toggle("light-mode");
+    body.classList.toggle("dark-mode");
     console.log("clicker");
   });

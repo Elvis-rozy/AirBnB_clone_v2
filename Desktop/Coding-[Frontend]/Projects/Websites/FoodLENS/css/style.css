@@ -64,42 +64,44 @@ body {
 /*=========================================
 Dark mode/ Light mode Styles
 =========================================*/
-.light-mode {
-  background: linear-gradient(45deg, rgba(118, 0, 93, 0.6), #ff7bb8, rgba(118, 0, 93, 0.6), #9760c9, rgba(149, 147, 255, 0.6784313725));
-  color: #333;
+.dark-mode {
+  background: black;
+  color: rgba(188, 161, 199, 0.9098039216);
+  box-shadow: none;
+}
+
+body.dark-mode .new-section .about-cards .about-card,
+body.dark-mode footer,
+body.dark-mode footer .footer li a {
+  background: rgba(0, 0, 0, 0.58);
+  color: rgba(188, 161, 199, 0.9098039216);
+}
+body.dark-mode .new-section .about-cards .about-card:hover,
+body.dark-mode footer:hover,
+body.dark-mode footer .footer li a:hover {
+  box-shadow: none;
+}
+
+body.dark-mode .trust .tools .cards .card {
+  background: rgba(38, 38, 38, 0.52);
+}
+
+body.dark-mode .review-cards .review-card {
+  box-shadow: 1px 1px 3px rgb(153, 153, 153);
+  background: rgba(0, 0, 0, 0.58);
+  color: rgba(188, 161, 199, 0.9098039216);
+}
+
+body.dark-mode #favorites .favs .fav {
+  box-shadow: none;
+}
+body.dark-mode #favorites .favs .fav:hover {
+  box-shadow: none;
 }
 
 /*=========================================
 Button Styles
 =========================================*/
-/* button {
-    min-width: 100px;
-    min-height: 38px;
-    background: #e7e7e7;
-    box-shadow: 4px 4px 12px #262626;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-    color: #0d0d25;
-    text-transform: capitalize;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    outline: none !important;
-    transition: .3s;
-    font-weight: 700;
-    overflow: hidden;
-    position: relative;
-
-    &:hover {
-        color: var(--cta);
-        transform: scale(.97);
-        border-color: #0d0d25;
-        box-shadow: inset 9px 9px 12px #cccccc, inset -9px -9px 12px #ffffff;
-    }
-}
- */
 button, .dash-hero .right .profile-submit, header .profile, .form .login-btn {
   display: inline-flex;
   align-items: center;
@@ -118,30 +120,30 @@ button, .dash-hero .right .profile-submit, header .profile, .form .login-btn {
 }
 button::before, .dash-hero .right .profile-submit::before, header .profile::before, .form .login-btn::before {
   content: "";
-  position: absolute;
   top: 0;
   left: 0;
   width: 50%;
   height: 100%;
+  position: absolute;
   background: rgba(255, 255, 255, 0.1);
 }
 button::after, .dash-hero .right .profile-submit::after, header .profile::after, .form .login-btn::after {
   content: "";
-  position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
   transition: 0.5s;
+  position: absolute;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
 }
 button:hover::after, .dash-hero .right .profile-submit:hover::after, header .profile:hover::after, .form .login-btn:hover::after {
   left: 100%;
 }
 button span, .dash-hero .right .profile-submit span, header .profile span, .form .login-btn span {
   position: absolute;
-  display: block;
   transition: 0.5s;
+  display: block;
 }
 button span:nth-child(1), .dash-hero .right .profile-submit span:nth-child(1), header .profile span:nth-child(1), .form .login-btn span:nth-child(1) {
   top: 0;
@@ -153,8 +155,8 @@ button span:nth-child(1), .dash-hero .right .profile-submit span:nth-child(1), h
 button span:nth-child(2), .dash-hero .right .profile-submit span:nth-child(2), header .profile span:nth-child(2), .form .login-btn span:nth-child(2) {
   top: 0;
   left: 0;
-  width: 1px;
   height: 0;
+  width: 1px;
   background: #fff;
 }
 button span:nth-child(3), .dash-hero .right .profile-submit span:nth-child(3), header .profile span:nth-child(3), .form .login-btn span:nth-child(3) {
@@ -167,25 +169,25 @@ button span:nth-child(3), .dash-hero .right .profile-submit span:nth-child(3), h
 button span:nth-child(4), .dash-hero .right .profile-submit span:nth-child(4), header .profile span:nth-child(4), .form .login-btn span:nth-child(4) {
   bottom: 0;
   right: 0;
-  width: 1px;
   height: 0;
+  width: 1px;
   background: #fff;
 }
 button:hover span:nth-child(1), .dash-hero .right .profile-submit:hover span:nth-child(1), header .profile:hover span:nth-child(1), .form .login-btn:hover span:nth-child(1) {
-  width: 100%;
   transform: translateX(100%);
+  width: 100%;
 }
 button:hover span:nth-child(2), .dash-hero .right .profile-submit:hover span:nth-child(2), header .profile:hover span:nth-child(2), .form .login-btn:hover span:nth-child(2) {
-  height: 100%;
   transform: translateY(100%);
+  height: 100%;
 }
 button:hover span:nth-child(3), .dash-hero .right .profile-submit:hover span:nth-child(3), header .profile:hover span:nth-child(3), .form .login-btn:hover span:nth-child(3) {
-  width: 100%;
   transform: translateX(-100%);
+  width: 100%;
 }
 button:hover span:nth-child(4), .dash-hero .right .profile-submit:hover span:nth-child(4), header .profile:hover span:nth-child(4), .form .login-btn:hover span:nth-child(4) {
-  height: 100%;
   transform: translateY(-100%);
+  height: 100%;
 }
 button:hover, .dash-hero .right .profile-submit:hover, header .profile:hover, .form .login-btn:hover {
   transform: scale(0.97);
@@ -257,12 +259,15 @@ Mobile menu Styles
   height: 100%;
   flex-direction: column;
 }
+.mobile-menu ul li:last-child {
+  margin-right: 30px;
+}
 .mobile-menu ul li {
   padding: 20px 0;
   transition: 0.3s;
 }
 .mobile-menu ul li a {
-  color: var(--white);
+  color: var(--background-light-gray);
   transition: 0.3s;
 }
 .mobile-menu ul li:hover {
@@ -271,10 +276,6 @@ Mobile menu Styles
 }
 .mobile-menu ul li:hover a {
   color: var(--cta);
-}
-
-footer .copy_right button, footer .copy_right .dash-hero .right .profile-submit, .dash-hero .right footer .copy_right .profile-submit, footer .copy_right header .profile, header footer .copy_right .profile, footer .copy_right .form .login-btn, .form footer .copy_right .login-btn {
-  border-radius: 50%;
 }
 
 /*=====================================
@@ -429,10 +430,15 @@ header nav {
   height: 12.7vh;
   padding: 1.25rem 2.5rem;
 }
-header nav .header_logo {
-  width: 110px;
-  height: 100px;
-  border-radius: 50%;
+header nav .logo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(65, 53, 96);
+}
+header nav .logo img {
+  width: 70px;
+  height: 50px;
 }
 header nav ul {
   display: flex;
@@ -493,8 +499,14 @@ Mobile and Tab setup
   header nav {
     width: 100%;
     height: 10vh;
+  }
+}
+@media (max-width: 950px) and (max-width: 550px) {
+  header nav {
     padding: 10px 20px;
   }
+}
+@media (max-width: 950px) {
   header nav .header_logo {
     width: 60px;
     height: 60px;
@@ -569,7 +581,7 @@ Footer Setup
 }
 
 footer {
-  background-color: var(--background-light-gray);
+  background: var(--background-light-gray);
   position: relative;
 }
 footer .first-sect {
@@ -578,10 +590,25 @@ footer .first-sect {
   border-bottom: 0.1px solid rgb(219, 219, 219);
   padding: 50px 0;
 }
-footer .first-sect .footer_logo {
-  width: 110px;
-  height: 100px;
-  border-radius: 50%;
+footer .first-sect .logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+footer .first-sect #tt {
+  padding-bottom: 0;
+}
+footer .first-sect .logo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(65, 53, 96);
+  padding-bottom: 20px;
+}
+footer .first-sect .logo img {
+  width: 70px;
+  height: 50px;
 }
 footer .first-sect .footer {
   display: flex;
@@ -593,6 +620,7 @@ footer .first-sect .footer li {
 }
 footer .first-sect .footer li:nth-child(1) {
   font-size: 20px;
+  padding-bottom: 25px;
 }
 footer .first-sect .footer li a {
   color: var(--text);
@@ -621,7 +649,13 @@ footer .copy_right {
   padding: 30px 40px;
   color: var(--accent);
 }
+footer .copy_right img {
+  width: 30px;
+  height: 30px;
+}
 footer .copy_right a {
+  display: flex;
+  align-items: center;
   color: var(--accent);
 }
 
@@ -705,7 +739,7 @@ Brands Setup
   padding-bottom: 30px;
   position: relative;
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 .trust .tools .cards .card {
   border: 1px solid rgb(225, 225, 225);
@@ -713,7 +747,7 @@ Brands Setup
   align-items: center;
   background: rgb(245, 245, 245);
   flex-direction: column;
-  border-radius: 20px;
+  border-radius: 3px;
   position: relative;
   padding: 20px;
   transition: 0.3s;
@@ -815,9 +849,9 @@ About Setup
 }
 .main .about {
   background-image: url("/images/backgrounds/header-bg.png");
-  background-size: contain;
+  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   display: flex;
   align-items: center;
   padding: 40px 40px 80px;
@@ -853,15 +887,15 @@ About Setup
   padding-left: 40px;
 }
 .main .about .first-box img, .main .about .second-box img {
-  width: 300px;
+  width: 350px;
   height: 350px;
 }
 
 .new-section {
   background-image: url("/images/backgrounds/header-bg.png");
-  background-size: contain;
+  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   overflow-x: hidden;
   padding: 0 60px;
   text-align: start;
@@ -885,7 +919,7 @@ About Setup
   align-items: center;
   background: rgb(245, 245, 245);
   flex-direction: column;
-  border-radius: 20px;
+  border-radius: 3px;
   overflow: hidden;
   position: relative;
   transition: 0.3s;
@@ -897,7 +931,7 @@ About Setup
 }
 .new-section .about-cards .about-card:hover {
   box-shadow: 1px 4px 6px rgb(153, 153, 153);
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .new-section .about-cards .about-card img {
   width: 100%;
@@ -929,6 +963,13 @@ Mobile and Tab setup
     font-size: 30px;
     transform: rotate(0);
   }
+  .main .about .first-box, .main .about .second-box {
+    flex-direction: row;
+    align-items: start;
+  }
+  .main .about .first-box p, .main .about .second-box p {
+    text-align: start;
+  }
   .main .about .first-box {
     margin-right: 0;
     margin-bottom: 30px;
@@ -936,12 +977,21 @@ Mobile and Tab setup
   .main .about .first-box p {
     padding-right: 0;
   }
+}
+@media (max-width: 950px) and (max-width: 550px) {
+  .main .about .first-box img, .main .about .second-box img {
+    display: none;
+  }
+}
+@media (max-width: 950px) {
   .main .about .second-box {
     margin-left: 0;
   }
   .main .about .second-box p {
     padding-left: 0;
   }
+}
+@media (max-width: 950px) {
   .main .new-section .about-cards {
     display: block;
   }
@@ -972,7 +1022,7 @@ Reviews Setup
   align-items: center;
   background: rgb(245, 245, 245);
   flex-direction: column;
-  border-radius: 20px;
+  border-radius: 30px 0;
   overflow: hidden;
   width: 500px;
 }
@@ -986,12 +1036,12 @@ Reviews Setup
   font-size: 18px;
 }
 .review-cards .review-card .head-info {
-  font-size: 10.3px;
+  font-size: 12px;
 }
 .review-cards .review-card .info {
   padding: 15px 20px 30px;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 /*
@@ -1191,7 +1241,9 @@ header .profile img {
   justify-content: center;
   width: 100%;
   height: 100vh;
+  flex-direction: column;
   position: relative;
+  transition: 0.3s;
 }
 #home::before {
   content: "";
@@ -1206,37 +1258,25 @@ header .profile img {
   background-position: center;
   background-repeat: no-repeat;
 }
-#home .search-form {
+#home h1 {
+  padding-bottom: 20px;
+  color: var(--white);
   position: relative;
+  font-size: 52px;
 }
-#home .search-form input {
-  box-shadow: 3px 8px 8px rgb(0, 0, 0);
-  background-color: rgba(0, 0, 84, 0.43);
-  width: 550px;
-  height: 50px;
-  padding: 4px 20px 0 60px;
-  border-radius: 30px;
-  text-align: start;
-  color: var(--cta);
-  font-size: 18px;
-  cursor: pointer;
+#home p {
+  color: rgb(227, 227, 227);
+  padding-bottom: 40px;
+  position: relative;
+  font-size: 20px;
+}
+#home a {
+  color: var(--white);
+  font-weight: 700;
   transition: 0.3s;
-  outline: none;
 }
-#home .search-form input::placeholder {
-  color: rgb(158, 158, 158);
-}
-#home .search-form input:hover {
-  background-color: rgba(5, 5, 51, 0.678);
-}
-#home .search-form img {
-  width: 40px;
-  height: 45px;
-  transform: translateY(-50%);
-  filter: brightness(1.4);
-  position: absolute;
-  left: 15px;
-  top: 50%;
+#home a:hover {
+  color: var(--cta);
 }
 
 /*
@@ -1373,18 +1413,21 @@ Mobile and Tab setup
   display: flex;
   align-items: start;
   justify-content: center;
-  background-color: rgba(50, 50, 56, 0.25);
+  background-color: rgba(188, 188, 255, 0.13);
+  box-shadow: 14px 12px 6px rgba(120, 118, 118, 0.4705882353);
   flex-direction: column;
-  border-radius: 10px;
+  border-radius: 3px;
   overflow: hidden;
+  transition: 0.3s;
+}
+#favorites .favs .fav:hover {
+  transform: scale(0.97);
+  box-shadow: inset 11px -12px 6px rgba(147, 143, 143, 0.3215686275);
 }
 #favorites .favs .fav #fav1 {
   width: 100%;
   height: 250px;
   transition: 0.3s;
-}
-#favorites .favs .fav #fav1:hover {
-  transform: scale(1.05);
 }
 #favorites .favs .fav h4 {
   margin: 20px 0 0 10px;
@@ -1442,8 +1485,6 @@ Dashboard Setup
 
 .dash-hero {
   background: linear-gradient(to right, rgb(240, 240, 240), rgb(143, 141, 141), rgb(215, 213, 213));
-  width: 100%;
-  height: 100vh;
   grid-template-columns: 0.6fr 1.1fr 1.2fr;
   color: var(--text);
   padding: 30px;
@@ -1553,18 +1594,18 @@ Dashboard Setup
   background: linear-gradient(45deg, rgb(75, 75, 126), rgb(247, 172, 114));
   flex-direction: column;
   border-radius: 0 20px;
-  position: absolute;
+  position: relative;
   padding: 20px;
   transition: 1s;
   display: flex;
   gap: 20px;
 }
-.dash-hero .right .profile-edit .personal-info, .dash-hero .right .profile-edit .diet-comp, .dash-hero .right .profile-edit .tolerance, .dash-hero .right .profile-edit .meal-info {
+.dash-hero .right .profile-edit form, .dash-hero .right .profile-edit .diet-comp, .dash-hero .right .profile-edit .tolerance, .dash-hero .right .profile-edit .meal-info {
   flex-direction: column;
   display: flex;
 }
-.dash-hero .right .profile-edit .personal-info, .dash-hero .right .profile-edit .tolerance {
-  gap: 20px;
+.dash-hero .right .profile-edit form, .dash-hero .right .profile-edit .tolerance {
+  gap: 30px;
 }
 .dash-hero .right .profile-edit .diet-comp {
   gap: 10px;
@@ -1575,6 +1616,14 @@ Dashboard Setup
 .dash-hero .right .profile-edit .input-box {
   position: relative;
   width: 350px;
+}
+.dash-hero .right .profile-edit .input-box img {
+  margin-right: 20px;
+  position: absolute;
+  cursor: pointer;
+  bottom: 25%;
+  width: 20px;
+  right: 0;
 }
 .dash-hero .right .profile-edit .input-box label {
   transform: translateY(-50%);
@@ -1618,24 +1667,28 @@ Dashboard Setup
 @media (max-width: 950px) {
   .dash-hero {
     grid-template-columns: 0.7fr 1.3fr;
+    height: 100vh;
   }
   .dash-hero .middle {
     display: none;
   }
   #head {
-    width: 100%;
     border-radius: 0;
+    width: 100%;
   }
 }
 @media (max-width: 950px) and (max-width: 550px) {
   .dash-hero {
     display: flex;
     align-items: start;
-    padding: 10vh 20px 30px;
     flex-direction: column;
+    padding: 13vh 0 0;
+    height: auto;
+    gap: 0;
   }
   .dash-hero .left {
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
   }
   .dash-hero .left h2 {
     margin-bottom: 0;
@@ -1650,17 +1703,20 @@ Dashboard Setup
   }
   .dash-hero .right {
     justify-content: start;
+    height: 100vh;
     width: 100%;
   }
   .dash-hero .right .profile-details {
+    padding: 20px;
     margin-top: 0;
   }
   .dash-hero .right .profile-edit {
     width: 100%;
     height: 100vh;
     align-items: center;
+    position: absolute;
     border-radius: 0;
-    top: 10vh;
+    top: 12vh;
   }
   .dash-hero .right .profile-submit {
     min-width: 300px;
@@ -1669,15 +1725,6 @@ Dashboard Setup
     padding: 30px 10px;
   }
 }
-.invisible {
-  filter: blur(50px);
-  transform: translateX(200%);
-}
-
-.visible {
-  transform: translateX(0);
-}
-
 /*=========================================
 Profile page Styles
 =========================================*/
@@ -1723,7 +1770,7 @@ header nav .search-form img {
   width: 100%;
   height: auto;
   grid-template-columns: repeat(2, 1fr);
-  padding: 15vh 30px 40px;
+  padding: 15vh 40px 40px;
   color: var(--text);
   display: grid;
   gap: 30px;
@@ -1731,6 +1778,7 @@ header nav .search-form img {
 .result img {
   width: 100%;
   height: 300px;
+  border-radius: 30% 0;
 }
 .result .food-details {
   display: flex;
@@ -1738,6 +1786,9 @@ header nav .search-form img {
   flex-direction: column;
   padding: 0 30px;
   gap: 10px;
+}
+.result .food-details span {
+  display: flex;
 }
 .result .food-details p {
   text-align: start;
@@ -1781,6 +1832,7 @@ header nav .search-form img {
   align-items: start;
   justify-content:  space-between;
   flex-direction: column;
+  padding: 0 30px;
   text-align: start;
   gap: 10px;
 }
@@ -1788,10 +1840,31 @@ header nav .search-form img {
   text-align: start;
 }
 .result .ingredients-info p {
+  text-align: start;
+  line-height: 30px;
+  width: 100%;
   border: 1px solid #dbdbdb;
-  padding: 10px;
+  padding: 20px;
 }
 
+/*
+=========================================
+Mobile and Tab setup
+=========================================
+*/
+@media (max-width: 550px) {
+  .result {
+    display: flex;
+    flex-direction: column;
+    padding: 12vh 0 40px;
+  }
+  .result img {
+    border-radius: 0;
+  }
+  .result .food-details {
+    padding: 0 20px;
+  }
+}
 .video-tutorial {
   display: flex;
   align-items: center;
@@ -1814,6 +1887,17 @@ header nav .search-form img {
   padding: 10px 0;
 }
 
+/*
+=========================================
+Mobile and Tab setup
+=========================================
+*/
+@media (max-width: 550px) {
+  .video-tutorial .video {
+    width: 100%;
+    height: 500px;
+  }
+}
 .more {
   overscroll-behavior-inline: contain;
   grid-auto-columns: 36%;
@@ -1825,12 +1909,12 @@ header nav .search-form img {
 }
 .more .more-card {
   background: rgba(128, 128, 128, 0.1019607843);
-  border-radius: 10px;
+  border-radius: 3px;
   overflow: hidden;
 }
 .more .more-card img {
   width: 100%;
-  height: 250px;
+  height: 220px;
 }
 .more .more-card h5 {
   text-align: start;
@@ -1908,70 +1992,107 @@ header {
 }
 
 .categories {
-  position: relative;
-  height: auto;
+  text-align: center;
 }
-.categories .buttons {
-  position: fixed;
+.categories .cat-header {
   border-bottom: 1px solid rgba(189, 188, 188, 0.32);
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  align-items: center;
+  padding-top: 13vh;
+  position: fixed;
   width: 100%;
   background: white;
-  padding: 15vh 30px 10px;
   z-index: 3;
 }
-.categories .buttons .small {
-  color: var(--text);
-  color: rgb(134, 134, 135);
-  transition: 0.3s;
-  font-size: 18px;
+.categories .cat-header h2 {
+  padding-bottom: 20px;
+  color: var(--cta);
 }
-.categories .buttons .small:hover {
+.categories .cat-header .buttons {
+  height: 30px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(6, 1fr);
+}
+.categories .cat-header .buttons .btn {
+  color: rgb(134, 134, 135);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.categories .cat-header .buttons .btn:hover {
   color: var(--cta);
   font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
 }
-.categories .group {
+.categories .section-center {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  padding: 25vh 50px 50px;
-  gap: 30px;
+  padding: 30vh 50px 40px;
+  gap: 40px 25px;
 }
-.categories .group .pod {
-  background: white;
-  width: 100%;
-  height: 180px;
+.categories .section-center .menu-item {
+  display: flex;
+  flex-direction: column;
   position: relative;
+  height: 170px;
+  overflow: hidden;
+  border-radius: 30px 0;
   transition: 0.3s;
 }
-.categories .group .pod:hover {
+.categories .section-center .menu-item:hover {
   box-shadow: 3px 4px 6px #817e7e;
   transform: scale(1.03);
 }
-.categories .group .pod img {
+.categories .section-center .menu-item .photo {
   width: 100%;
   height: 100%;
 }
-.categories .group .pod h5, .categories .group .pod p {
-  position: absolute;
-  text-align: start;
-  padding: 3px 10px 3px;
-  background: var(--white);
-  border-radius: 0 10px 0 0;
-}
-.categories .group .pod h5 {
-  bottom: 15px;
-  font-size: 14px;
-}
-.categories .group .pod p {
+.categories .section-center .menu-item .item-info {
+  padding: 5px 10px 5px 5px;
   bottom: 0;
-  font-size: 10px;
+  background: white;
+  border-radius: 0 15px 0 0;
+  position: absolute;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+.categories .section-center .menu-item .item-info h4, .categories .section-center .menu-item .item-info p {
+  text-align: start;
 }
 
-.big {
-  color: var(--cta);
-  font-weight: 700;
-  font-size: 24px;
+.Grid {
+  display: grid;
+}
+
+.Hide {
+  display: none;
+}
+
+/*
+=========================================
+Mobile and Tab setup
+=========================================
+*/
+@media (max-width: 950px) {
+  .categories .section-center {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 25vh 20px 30px;
+  }
+}
+@media (max-width: 950px) and (max-width: 550px) {
+  header nav .search-form input {
+    width: 200px;
+  }
+  .categories .section-center {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 33vh 20px 30px;
+  }
+  .categories .cat-header .buttons {
+    grid-template-columns: repeat(3, 1fr);
+    height: 80px;
+  }
+  .categories .cat-header .buttons .btn:hover {
+    font: 17px;
+  }
 }

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+    ==================== stylesheet  ====================
+    -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>FoodLENS-Profile-page</title>
+</head>
+<body id="body">
+    <!--
+    ==================== Header & Nav  ====================
+    -->
+    <header id="head">
+        <nav>
+            <a class="logo" href="home.html"><img src="Images/logo/Logo.png" alt="Foodlens logo">FoodLENS</a>
+            <!--
+            ==================== Mobile menu Icon  ====================
+            -->
+            <div id="menu" href="" class="hide-for-desktop menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!--
+            ==================== Mobile menu Links  ====================
+            -->
+            <div class="mobile-menu hide-for-desktop">
+                <ul class="lnk">
+                    <li class="hide-for-desktop lnk"><a href="home.html">Home</a></li> <!--
+                --><li class="hide-for-desktop lnk Edit"><a href="dashboard.html">Profile</a></li><!--
+                --><li class="hide-for-desktop lnk edit"><a href="#">Edit Profile</a></li> <!--
+                --><li class="hide-for-desktop lnk"><a href="categoriesAll.html">Categories</a></li><!--
+                --><li class="hide-for-desktop lnk"><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="dash-hero">
+        <div class="left">
+            <img class="dash-pic hide-for-desktop" src="Images/profiles/profile-Hero.jpg" alt="profile image">
+            <h2>Hi Tristan</h2>
+            <div class="bars">
+                <a href="dashboard.html"><button class="edit-btn">Dashboard</button></a>
+                <a href="#"><button class="Active">Edit Profile</button></a>
+                <a href="home.html"><button class="home-btn">Home</button></a>
+                <a href="categoriesAll.html"><button class="cat-btn">Categories</button></a>
+                <a href="#contact"><button class="contct-btn">Contact Us</button></a>
+            </div>
+        </div>
+        <div class="middle">
+            <img src="Images/profiles/profile-Hero.jpg" alt="profile image">
+        </div>
+        <div class="right">
+            <div class="profile-edit">
+                <div class="personal-info">
+                    <h3>Personal Info</h3>
+                    <!--
+                    ==================== Form Section  ====================
+                    -->
+                    <section>
+                        <form id="form">
+                            <div class="input-box spec1">
+                                <input class="input" type="name" id="name" name="name">
+                                <label for="name">Username</label>
+                            </div>
+                            <div class="input-box spec1">
+                                <input class="input" type="email" id="email" name="email">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="input-box spec1">
+                                <input class="input" type="password" id="password" name="password">
+                                <img id="eyeicon" src="Images/logo/eye-close.png" alt="">
+                                <label for="password">New Password</label>
+                            </div>
+                            <div class="input-box spec1">
+                                <input class="input" type="text" id="bio" name="bio" placeholder="eg. I'm an athlete with fairly average culinary skills...">
+                                <label for="bio">Bio</label>
+                            </div>
+
+                            <div class="meal-info">
+                                <div class="diet-comp">
+                                    <div class="input-box">
+                                        <label for="preference" id="percents-label">Carbohydrates</label>
+                                        <input class="percents" type="number" id="preference" name="preference" placeholder="%">
+                                    </div>
+                                    <div class="input-box">
+                                        <label for="allergens" id="percents-label">Proteins</label>
+                                        <input class="percents" type="number" id="allergens" name="allergens"  placeholder="%">
+                                    </div>
+                                    <div class="input-box">
+                                        <label for="preference" id="percents-label">Fats</label>
+                                        <input class="percents" type="number" id="preference" name="preference" placeholder="%">
+                                    </div>
+                                </div>
+                                <div class="tolerance">
+                                    <div class="input-box spec1">
+                                        <input class="input" type="text" id="preference" name="preference" placeholder="eg. bromate free, low fats etc">
+                                        <label for="preference">Meal Preference</label>
+                                    </div>
+                                    <div class="input-box spec1">
+                                        <input class="input" type="text" id="allergens" name="allergens"  placeholder="eg. almond, cream etc">
+                                        <label for="allergens">Allergens</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--
+                            ==================== Submit Button  ====================
+                            -->
+                            <button><input type="submit" class="profile-submit" value="Save Changes"></button>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--
+    ==================== Footer & Contact  ====================
+      -->
+      <footer id="contact">
+        <div class="first-sect">
+            <div class="logo-box">
+                <a class="logo" href="home.html"><img src="Images/logo/Logo.png" alt="Foodlens logo">FoodLENS</a>
+                <ul class="footer mode">
+                    <li id="tt">Love our work? Contact us</li>
+                    <li id="toggle-mode">Dark/Light mode</li>
+                    <li id="logout">Log out</li>
+                </ul>
+            </div>
+            <ul class="footer">
+                <li>Elvis Oguoma O.</li>
+                <li><a href="https://www.linkedin.com/in/elvis-oguoma-66a77318a"><button id="socials">
+                    <img src="Images/logo/linkedin.png" alt="linkedin">
+                </button>Linkedin</a></li>
+                <li><a href="https://www.twitter.com/r0elle"><button id="socials">
+                    <img src="Images/logo/twitter.png" alt="twitter">
+                </button>Twitter</a></li>
+                <li><a href="elvisrozy52@gmail.com"><button id="socials">
+                    <img src="Images/logo/gmail.png" alt="gmail">
+                </button>Gmail</a></li>
+            </ul>
+            <ul class="footer">
+                <li>Aralu Kenechukwu C.</li>
+                <li><a href="https://www.linkedin.com/in/kenechukwu-aralu-1b7238207"><button id="socials">
+                    <img src="Images/logo/linkedin.png" alt="linkedin">
+                </button>Linkedin</a></li>
+                <li><a href="https://twitter.com/aralukene"><button id="socials">
+                    <img src="Images/logo/twitter.png" alt="twitter">
+                </button>Twitter</a></li>
+                <li><a href="junioraralu@gmail.com"><button id="socials">
+                    <img src="Images/logo/gmail.png" alt="gmail">
+                </button>Gmail</a></li>
+            </ul>
+            <ul class="footer">
+                <li>Aweda Ifeoluwa</li>
+                <li><a href="https://ng.linkedin.com/in/aweda-ifeoluwa-b91b9976"><button id="socials">
+                    <img src="Images/logo/linkedin.png" alt="linkedin">
+                </button>Linkedin</a></li>
+                <li><a href="https://twitter.com/LovethSir"><button id="socials">
+                    <img src="Images/logo/twitter.png" alt="twitter">
+                </button>Twitter</a></li>
+                <li><a href="ifeI1939@gmail.com"><button id="socials">
+                    <img src="Images/logo/gmail.png" alt="gmail">
+                </button>Gmail</a></li>
+            </ul>
+        </div>
+        <div class="copy_right">
+            &copy;Copyright FoodLENS 2023
+            <a href="#">Back to top</a>
+        </div>
+    </footer>
+    <!--
+    ==================== JavaScript File  ====================
+      -->
+      <script src="app/js/dashboard.js"></script>
+      <script src="app/js/globals.js"></script>
+      <script src="app/js/update-info.js"></script>
+</body>
+</html>

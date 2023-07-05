@@ -58,7 +58,7 @@ form.addEventListener('submit', function (e) {
         // Collect form data
         var formData = new FormData(this);
         // Make a POST request using fetch API
-        fetch("https://localhost:3000/api/v1/auth/register", {
+        fetch("http://localhost:3000/api/v1/auth/register", {
             method: "POST",
             body: formData
         }).then(function(response) {

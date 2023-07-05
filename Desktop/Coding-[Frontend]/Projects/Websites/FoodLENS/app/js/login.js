@@ -21,40 +21,29 @@ const email = document.getElementById('email');
 const form = document.getElementById('form');
 
 form.addEventListener('submit', function (e) {
+    // Prevent form submission
     e.preventDefault();
-    console.log('clicked');
 
     if (email.value == null || email.value === "") {
-        e.preventDefault();
         alert("Email address cannot be blank");
         return false;
-    } else if (token.value == null || token.value === "") {
-        e.preventDefault();
-        alert("Token cannot be blank");
-        return false;
     } else if (password.value == null || password.value === "") {
-        e.preventDefault();
         alert("Password cannot be blank");
         return false;
     } else if (password.value.length <= 7) {
-        e.preventDefault();
         alert("Password must be at least 8 characters long.");
         return false;
     } else if (password.value.length >= 20) {
-        e.preventDefault();
         alert("Password must be less than 20 characters.");
         return false;
     } else if (password.value === 'password') {
-        e.preventDefault();
         alert("Password cannot be password.");
         return false;
     } else {
-        // Prevent form submission
-        e.preventDefault();
         // Collect form data
         var formData = new FormData(this);
         // Make a POST request using fetch API
-        fetch("https://localhost:3000/api/v1/auth/login", {
+        fetch("http://localhost:3000/api/v1/auth/login", {
             method: "POST",
             body: formData
         }).then(function(response) {

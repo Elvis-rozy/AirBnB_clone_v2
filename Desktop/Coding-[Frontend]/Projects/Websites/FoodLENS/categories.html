@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--
     ==================== stylesheet  ====================
     -->
     <link rel="stylesheet" href="css/style.css">
     <title>FoodLENS-Categories-page</title>
+
 </head>
 <body>
     <!--
@@ -15,14 +17,15 @@
     -->
     <header>
         <nav>
-            <a href="#"><img class="header_logo" src="Images/logo/Logo.png" alt="Foodlens logo"></a>
-            <ul>
+            <a class="logo" href="home.html"><img src="Images/logo/Logo.png" alt="Foodlens logo">FoodLENS</a>
+            <ul class="hide-for-mobile">
                 <li class="hide-for-mobile"><a class="link1" href="home.html">Home</a></li>
                 <li class="hide-for-mobile"><a class="link2" href="about.html">About</a></li>
+                <li class="hide-for-mobile Hide  link"><a class="link2" href="categories.html">Categories</a></li>
                 <li class="hide-for-mobile"><a class="link3" href="#contact">Contact</a></li>
             </ul>
             <div class="search-form">
-                <input type="search" id="search-box" placeholder="Search ...">
+                <input type="search" id="search-box" name="searchBox" placeholder="Search ...">
                 <label for="search-box" class="search"><img src="Images/logo/search.png" alt="search icon"></label>
             </div>
 
@@ -42,547 +45,173 @@
                 <ul class="lnk">
                     <li class="hide-for-desktop lnk"><a href="home.html">Home</a></li><!--
                 --><li class="hide-for-desktop lnk"><a href="dashboard.html">Profile</a></li> <!--
+                --><li class="hide-for-desktop lnk"><a href="categories.html">Categories</a></li> <!--
                 --><li class="hide-for-desktop lnk"><a href="about.html">About</a></li><!--
-                --><li class="hide-for-desktop lnk"><a href="#contact">Contact</a></li>
+                --><li class="hide-for-desktop lnk"><a href="#contact">Contact</a></li><!--
+                --><li class="hide-for-desktop lnk"><a href="#">Logout</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-
+    <!--
+        ==================== Categories Section  ====================
+    -->
     <section class="categories">
-        <div class="buttons">
-            <a class="big a" href="#all">All</a>
-            <a class="small b" href="#starches">Starches</a>
-            <a class="small c" href="#meat_seafood">Meat & Seafood</a>
-            <a class="small d" href="#pastries">Pastries</a>
-            <a class="small e" href="#fruits">Fruits</a>
-            <a class="small f" href="#vegan">Vegan</a>
+        <div class="cat-header">
+            <h2>Categories</h2>
+            <!--filter Buttons-->
+            <div class="buttons"></div>
         </div>
-        <div class="groups">
-<!--  ================  ALL  ================-->
-            <div id="all" class="group">
-                <div id="all" class="pod">
-                    <img src="https://www.mygorgeousrecipes.com/wp-content/uploads/2021/07/Romanian-Cheese-Pastries-5.jpg"alt="cheese pastry">
-                    <h5>Cheese pastry</h5>
-                    <p>Cuisine: American</p>
-                </div>
-                <div class="pod">
-                    <img src="https://preppykitchen.com/wp-content/uploads/2021/05/Puff-Pastry-Feature.jpg"alt="puff pastry">
-                    <h5>Puff pastry</h5>
-                    <p>Cuisine: American</p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.specialk.ca/content/dam/NorthAmerica/specialk_ca/en_CA/images/products/products-crisps.png"alt="pastry crisps">
-                    <h5>Pastry crisps</h5>
-                    <p>Cuisine: American</p>
-                </div>
-                <div class="pod">
-                    <img src="https://images.immediate.co.uk/production/volatile/sites/2/2020/02/OLI-0220_Everyday-SalmonChardPie_02033_preview-f08e194.jpg?quality=90&crop=3px,374px,1257px,541px&resize=556,505"alt="fillo pastry">
-                    <h5>Fillo pastry</h5>
-                    <p>Cuisine: Turkey</p>
-                </div>
-                <div class="pod">
-                    <img src="https://i0.wp.com/sweetordeal.com/wp-content/uploads/2021/02/012-600x1200-1.jpg?resize=600%2C1200&ssl=1"alt="pastry fruit-filled">
-                    <h5>Pastry fruit-filled</h5>
-                    <p>Cuisine: Italian</p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.snowflake.co.za/simple-files/5e75829c17a54b87a52f2ee49985fe5e/flaky-pastry.jpg"alt="flaky pastry">
-                    <h5>Flaky pastry</h5>
-                    <p>Cuisine: American</p>
-                </div>
-                <div class="pod">
-                    <img src="https://img-global.cpcdn.com/recipes/615955edcd3f1913/1200x630cq70/photo.jpg"alt="spring roll pastry">
-                    <h5>Spring roll pastry</h5>
-                    <p>Cuisine: Malaysia</p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.chsugar.com/sites/chsugar_com/files/2022-09/Web_Recipe_Description_Image-GuavaPastries.jpg"alt="guava pastries">
-                    <h5>Guava pastries"</h5>
-                    <p>Cuisine: Brazil</p>
-                </div>
-                <div class="pod">
-                    <img src="https://visitproseccoitaly.com/wp-content/uploads/2022/02/Italian-Desserts-cannoli.jpg"alt="pastry italian with cheese">
-                    <h5>Pastry italian with cheese</h5>
-                    <p>Cuisine: Italy</p>
-                </div>
-                <div class="pod">
-                    <img src="https://ipcdn.freshop.com/resize?url=https://images.freshop.com/00760064124028/4f8b078efd94bce72461be72edcd0331_large.png&width=512&type=webp&quality=90"alt="vanilla panque">
-                    <h5>Vanilla panque</h5>
-                    <p>Cuisine: Italy</p>
-                </div>
-
-
-                <div class="pod">
-                    <img src="https://images.eatthismuch.com/img/4787_Shiratori_ce8e6cc0-406b-44ff-a0c2-758ad5afc405.jpg"alt="cornmeal degermed enriched yellow">
-                    <h5>Cornmeal degermed enriched yellow</h5>
-                    <p>Cuisine: America</p>
-                </div>
-                <div class="pod">
-                    <img src="https://nakaseromarket.ug/wp-content/uploads/2020/04/finger-millet-flour-500x500-1.jpg"alt="millet flour">
-                    <h5>Millet flour</h5>
-                    <p>Cuisine: America</p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.melskitchencafe.com/wp-content/uploads/2013/04/Lasagna-Close-PSD.jpg"alt="pasta mix italian lasagna">
-                    <h5>Pasta mix italian lasagna</h5>
-                    <p>Cuisine: Italy</p>
-                </div>
-                <div class="pod">
-                    <img src="https://pbs.twimg.com/media/CXGbVDcWAAAbimV.jpg"alt="spaghetti and meatballs">
-                    <h5>Spaghetti and meatballs</h5>
-                    <p>Cuisine: Italy</p>
-                </div>
-                <div class="pod">
-                    <img src="https://images.food52.com/MrDZsfuLn7mES8E8yw1lLNz8ASQ=/1200x1200/808f3ec4-ce14-4b2e-8ece-4adbc688940b--WP_20140705_11_59_10_Pro.jpg" alt="cornmeal blue">
-                    <h5>Cornmeal blue</h5>
-                    <p>Cuisine: New mexico and arizona</p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.melskitchencafe.com/wp-content/uploads/french-bread2.jpg"alt="french bread">
-                    <h5>French bread</h5>
-                    <p>Cuisine: France</p>
-                </div>
-                <div class="pod">
-                    <img src="https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/90204d7a069297a00e98346ce32cff82.jpg" alt="pasta dry enriched">
-                    <h5>Pasta dry enriched</h5>
-                    <p>Cuisine: Italy</p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.recipetineats.com/wp-content/uploads/2020/09/Perfectly-Cooked-Brown-Rice_7-SQ.jpg" alt="food image">
-                    <h5>Brown rice</h5>
-                    <p>Cuisine: Thailand</p>
-                </div>
-                <div class="pod">
-                    <img src="https://mediavine-res.cloudinary.com/image/upload/s--ufgKKYLW--/c_limit,f_auto,fl_lossy,h_1080,q_auto,w_1920/v1614117601/bly4ef63gmoujbh7kmrj.jpg" alt="mexican rice">
-                    <h5>Mexican rice</h5>
-                    <p>Cuisine: Mexico</p>
-                </div>
-                <div class="pod">
-                    <img src="https://tropicalfoodies.files.wordpress.com/2012/01/boiled-plantains.jpg" alt="plantains porridge">
-                    <h5>plantains porridge</h5>
-                    <p>Cuisine: America</p>
-                </div>
-
-
-                <div class="pod">
-                    <img src="https://cookthink.com/wp-content/uploads/2022/06/raw-ground-chicken-turkey-meat-brown-table-dark-background-top-view.png" alt="food image">
-                    <h5>Ground turkey</h5>
-                    <p>Cuisine: America</p>
-                </div>
-                <div class="pod">
-                    <img src="https://hips.hearstapps.com/del.h-cdn.co/assets/18/11/1600x1200/sd-aspect-1520972774-pork-chops-horizontal.jpg?resize=1200:*" alt="pork chops">
-                    <h5>Pork chops</h5>
-                    <p>Cuisine: America</p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.keyingredient.com/media/ec/e2/8ae66a350cb0a99eea34806a892cc989d3a3.jpg/rh/fresh-old-fashioned-polish-sausage.jpg" alt="kielbasa sausage">
-                    <h5>kielbasa sausage</h5>
-                    <p>Cuisine: Poland</p>
-                </div>
-                <div class="pod">
-                    <img src="https://i0.wp.com/thehonestbison.com/wp-content/uploads/Bison_Sirloin_2.jpg?fit=1000%2C1000&ssl=1" alt="beef striploin">
-                    <h5>Beef striploin</h5>
-                    <p>Cuisine: Australia</p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.innit.com/public/recipes/images/1033177-1759476299-en-US-0_s1000.jpg" alt="bison sirloin">
-                    <h5>Bison sirloin</h5>
-                    <p>Cuisine: America</p>
-                </div>
-                <div class="pod">
-                    <img src="https://p1-tt-ipv6.byteimg.com/origin/pgc-image/6f9f40e6d05b4a57b4458efce95f75dc.jpg" alt="dried shrimp skin">
-                    <h5>Dried shrimp skin</h5>
-                    <p>Cuisine: China</p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.acouplecooks.com/wp-content/uploads/2020/05/Grilled-Salmon-015-1.jpg" alt="grilled salmon">
-                    <h5>Grilled salmon</h5>
-                    <p>Cuisine: Russia</p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.allrecipes.com/thmb/3cvtboRzz8aVtgf0ly1Fs_gaPTQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/7894897-b2e5c569f105486f8c1f826dfeecf314.jpg" alt="tilapia fillets">
-                    <h5>Tilapia fillets</h5>
-                    <p>Cuisine: China</p>
-                </div>
-                <div class="pod">
-                    <img src="https://simplelivingrecipes.com/wp-content/uploads/2022/06/baby-octopus-recipe-c.jpg" alt="baby octopus vulgaris">
-                    <h5>Baby octopus vulgaris</h5>
-                    <p>Cuisine: Korea</p>
-                </div>
-                <div class="pod">
-                    <img src="https://assets.wakefern.com/is/image/wakefern/3707140004-003?$Mi9Product_detail$" alt="boned salted pollock">
-                    <h5>Boned salted pollock</h5>
-                    <p>Cuisine: China</p>
-                </div>
-
-
-                <div class="pod">
-                    <img src="https://target.scene7.com/is/image/Target/GUEST_72a4aeab-859e-4796-b0f7-3644297e3527?wid=488&hei=488&fmt=pjpeg" alt="naked protein juice smoothie berry">
-                    <h5>Naked protein juice smoothie berry</h5>
-                    <p>Cuisine: America</p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.goya.com/media/1172/blackberry-fruit-pulp.png?height=366" alt="fruta whole blackberry">
-                    <h5>Fruta whole blackberry</h5>
-                    <p>Cuisine: America</p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.halfbakedharvest.com/wp-content/uploads/2016/04/Rocky-Road-Pudding-Parfaits-7.jpg" alt="rocky road pudding parfait">
-                    <h5>Rocky road pudding parfait</h5>
-                    <p>Cuisine: America</p>
-                </div>
-                <div class="pod">
-                    <img src="https://target.scene7.com/is/image/Target/GUEST_00ad68bb-2647-46d8-8b07-b1e488a08e2a?wid=488&hei=488&fmt=pjpeg" alt="protein juice smoothie">
-                    <h5>Protein juice smoothie</h5>
-                    <p>Cuisine: America</p>
-                </div>
-                <div class="pod">
-                    <img src="https://images.freshop.com/00075370001018/7782a039ba72b4f374b87f108fdfd39a_large.png" alt="guava shells">
-                    <h5>Guava shells</h5>
-                    <p>Cuisine: Cuba</p>
-                </div>
-                <div class="pod">
-                    <img src="https://i1.wp.com/mayakitchenette.com/wp-content/uploads/2018/08/Blue-smoothie-Recipe-3.jpg?ssl=1" alt="blue smoothie">
-                    <h5>Blue smoothie</h5>
-                    <p>Cuisine: America</p>
-                </div>
-                <div class="pod">
-                    <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/11/8/0/BXSP03H_Cranberry-Sauce_s4x3.jpg.rend.hgtvcom.406.406.suffix/1447093965462.jpeg" alt="cranberry sauce whole berry">
-                    <h5>Cranberry sauce whole berry</h5>
-                    <p>Cuisine: America/p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.slenderkitchen.com/sites/default/files/styles/gsd-1x1/public/recipe_images/coconut-chia-seed-pudding.jpg" alt="banana chia in coconut milk">
-                    <h5>Banana chia in coconut milk</h5>
-                    <p>Cuisine: America/p>
-                </div>
-                <div class="pod">
-                    <img src="https://mms.businesswire.com/media/20150420006497/en/463593/5/Slide1.jpg?download=1" alt="vegetable & fruit juice blend">
-                    <h5>Vegetable & fruit juice blend</h5>
-                    <p>Cuisine: America</p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.foodandwine.com/thmb/mQRg1X-X9XD547Fiu177BkyUl4Y=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Tanghulu-Candied-Fruit-Skewers-FT-RECIPE0622-4d39d6a1a89c442c9f1cafb923dceefb.jpg" alt="candied fruit">
-                    <h5>Candied fruit</h5>
-                    <p>Cuisine: China</p>
-                </div>
-
-
-                <div class="pod">
-                    <img src="https://www.bienmanger.com/tinyMceData/images/contents/637/content_lg.jpg" alt="potato flour">
-                    <h5>Potato flour</h5>
-                    <p>Cuisine: America</p>
-                </div>
-                <div class="pod">
-                    <img src="https://hips.hearstapps.com/hmg-prod/images/friedeggplant-recipe-2-1648493047.jpg?crop=0.6666666666666667xw:1xh;center,top&resize=1200:*" alt="fried eggplant">
-                    <h5>Fried eggplant</h5>
-                    <p>Cuisine: America/p>
-                </div>
-                <div class="pod">
-                    <img src="https://mexicanappetizersandmore.com/wp-content/uploads/How-to-Cook-Canned-Black-Beans-FB.png" alt="black beans">
-                    <h5>Black beans</h5>
-                    <p>Cuisine: Spain</p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.evolvingtable.com/wp-content/uploads/2019/11/How-to-Boil-Sweet-Potatoes-10-500x400.jpg" alt="boiled sweet potatoes">
-                    <h5>Boiled sweet potatoes</h5>
-                    <p>Cuisine: Nigeria</p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.allrecipes.com/thmb/mZfBazoEsKCUoqYOuXuCi--D6jQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/13478-sweet-potato-casserole-II-mfs302-032f142759794db4b4c538837595db2f.jpg" alt="candied yams">
-                    <h5>Candied yams</h5>
-                    <p>Cuisine: America/p>
-                </div>
-                <div class="pod">
-                    <img src="https://2.bp.blogspot.com/-kh133Lp0dYM/UgwMT5Khp8I/AAAAAAAAEoA/xl4WhoMUVjM/s1600/SAM_9623.JPG" alt="whole yellow peas">
-                    <h5>Whole yellow peas</h5>
-                    <p>Cuisine: America/p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.dinneratthezoo.com/wp-content/uploads/2018/03/broccoli-with-cheese-sauce-4.jpg" alt="broccoli with cheese sauce">
-                    <h5>Broccoli with cheese sauce</h5>
-                    <p>Cuisine: America/p>
-                </div>
-                <div class="pod">
-                    <img src="https://goldentropics.com/wp-content/uploads/2013/02/Egusi-Soup-and-Pounded-Yam-420x280_c.jpg" alt="nigerian pounded yam">
-                    <h5>Nigerian pounded yam</h5>
-                    <p>Cuisine: Nigeria</p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.maricruzavalos.com/wp-content/uploads/2019/08/tamales_de_elote_dulces.jpg" alt="corn tamales">
-                    <h5>Corn tamales</h5>
-                    <p>Cuisine: Mexico</p>
-                </div>
-                <div class="pod">
-                    <img src="https://images.ctfassets.net/qu53tdnhexvd/bJ2cSuGmXeou4AW2CucUa/af50d8c461f7f7791c667ec5f67c9fee/Roasted_pumpkin_with_chilli_spiked_crumb_54026.jpg?w=1080&h=1080" alt="roasted pumpkin">
-                    <h5>roasted pumpkin</h5>
-                    <p>Cuisine: Canada</p>
+        <!-- menu items-->
+        <div class="section-center" id="root"></div>
+    </section>
+    <!--
+        ==================== Search Result Section  ====================
+    -->
+    <section class="search-result-section Hide">
+        <div class="result">
+            <img id="img" src="Images/backgrounds/selection.jpg" alt="food image">
+            <div class="food-details">
+                <h3 id="foodName"></h3>
+                <span>Cuisine:  <p id="cuisine"></p></span>
+                <span>Category:  <p id="category"></p></span>
+                Description
+                <p id="descript"></p>
+                <div class="foodInfo">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Serving Quantity:</td>
+                                <td id="servQty" class="last"></td>
+                            </tr>
+                            <tr>
+                                <td>Serving Unit:</td>
+                                <td id="servUnit" class="last"></td>
+                            </tr>
+                            <tr>
+                                <td>Serving Weight Grams:</td>
+                                <td id="servWtgrm" class="last"></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-<!--  ================STARCHES  ================-->
-            <div id="starches" class="group">
-                <div class="pod">
-                    <img src="https://images.eatthismuch.com/img/4787_Shiratori_ce8e6cc0-406b-44ff-a0c2-758ad5afc405.jpg"alt="cornmeal degermed enriched yellow">
-                    <h5>Cornmeal degermed enriched yellow</h5>
-                    <p>Cuisine: America</p>
-                </div>
-                <div class="pod">
-                    <img src="https://nakaseromarket.ug/wp-content/uploads/2020/04/finger-millet-flour-500x500-1.jpg"alt="millet flour">
-                    <h5>Millet flour</h5>
-                    <p>Cuisine: America</p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.melskitchencafe.com/wp-content/uploads/2013/04/Lasagna-Close-PSD.jpg"alt="pasta mix italian lasagna">
-                    <h5>Pasta mix italian lasagna</h5>
-                    <p>Cuisine: Italy</p>
-                </div>
-                <div class="pod">
-                    <img src="https://pbs.twimg.com/media/CXGbVDcWAAAbimV.jpg"alt="spaghetti and meatballs">
-                    <h5>Spaghetti and meatballs</h5>
-                    <p>Cuisine: Italy</p>
-                </div>
-                <div class="pod">
-                    <img src="https://images.food52.com/MrDZsfuLn7mES8E8yw1lLNz8ASQ=/1200x1200/808f3ec4-ce14-4b2e-8ece-4adbc688940b--WP_20140705_11_59_10_Pro.jpg" alt="cornmeal blue">
-                    <h5>Cornmeal blue</h5>
-                    <p>Cuisine: New mexico and arizona</p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.melskitchencafe.com/wp-content/uploads/french-bread2.jpg"alt="french bread">
-                    <h5>French bread</h5>
-                    <p>Cuisine: France</p>
-                </div>
-                <div class="pod">
-                    <img src="https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/90204d7a069297a00e98346ce32cff82.jpg" alt="pasta dry enriched">
-                    <h5>Pasta dry enriched</h5>
-                    <p>Cuisine: Italy</p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.recipetineats.com/wp-content/uploads/2020/09/Perfectly-Cooked-Brown-Rice_7-SQ.jpg" alt="food image">
-                    <h5>Brown rice</h5>
-                    <p>Cuisine: Thailand</p>
-                </div>
-                <div class="pod">
-                    <img src="https://mediavine-res.cloudinary.com/image/upload/s--ufgKKYLW--/c_limit,f_auto,fl_lossy,h_1080,q_auto,w_1920/v1614117601/bly4ef63gmoujbh7kmrj.jpg" alt="mexican rice">
-                    <h5>Mexican rice</h5>
-                    <p>Cuisine: Mexico</p>
-                </div>
-                <div class="pod">
-                    <img src="https://tropicalfoodies.files.wordpress.com/2012/01/boiled-plantains.jpg" alt="plantains porridge">
-                    <h5>plantains porridge</h5>
-                    <p>Cuisine: America</p>
+            <div class="nutrition-facts">
+                <h3>Nutrition Facts</h3>
+                <p class="cal">Calories:<strong id="calor"></strong></p>
+                <p>The % Daily Value (DV) tells you how much a nutrient in
+                    a serving of food contributes to a daily diet. 2000 calories a
+                    day is used for general nutrition advice.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Total</th>
+                            <th scope="col">% Daily Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Total Carbohydrates  </strong><span id="totcarb"></span></td>
+                            <td class="last"><strong id="val1"></strong>%</td>
+                        </tr>
+                        <tr>
+                            <td>Dietry Fiber <strong id="dietfib"></strong></td>
+                            <td class="last"><strong id="val2"></strong>%</td>
+                        </tr>
+                        <tr>
+                            <td>Sugars  <strong id="sugars"></strong></td>
+                            <td class="last"><strong id="val3"></strong>%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Total Protein  </strong><span id="totprot"></span></td>
+                            <td class="last"><strong id="val4"></strong>%</td>
+                        </tr>
+                        <tr>
+                            <td>Iron  <strong id="irn"></strong></td>
+                            <td class="last"><strong id="val5"></strong>%</td>
+                        </tr>
+                        <tr>
+                            <td>Potassium  <strong id="pot"></strong></td>
+                            <td class="last"><strong id="val6"></strong>%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Total Fats  </strong><span id="totfat"></span></td>
+                            <td class="last"><strong id="val7"></strong>%</td>
+                        </tr>
+                        <tr>
+                            <td>Saturated Fat <strong id="satfat"></strong></td>
+                            <td class="last"><strong id="val8"></strong>%</td>
+                        </tr>
+                        <tr>
+                            <td>Sodium  <strong><span id="sodium"></span></strong></td>
+                            <td class="last"><strong id="val9"></strong>%</td>
+                        </tr>
+                        <tr>
+                            <td>Cholesterol  <strong id="cholest"></strong></td>
+                            <td class="last"><strong id="val10"></strong>%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="ingredients">
+                <div class="ingredients-info">
+                    <h3>Ingredients</h3>
+                    <p id="ingredient-details"></p>
+                    Ingredient Info source: <a id="ingsrc" href="#">source_name</a>
                 </div>
             </div>
-<!--  ================  MEAT & SEAFOOD  ================-->
-            <div id="meat_seafood" class="group">
-                <div class="pod">
-                    <img src="https://cookthink.com/wp-content/uploads/2022/06/raw-ground-chicken-turkey-meat-brown-table-dark-background-top-view.png" alt="food image">
-                    <h5>Ground turkey</h5>
-                    <p>Cuisine: America</p>
-                </div>
-                <div class="pod">
-                    <img src="https://hips.hearstapps.com/del.h-cdn.co/assets/18/11/1600x1200/sd-aspect-1520972774-pork-chops-horizontal.jpg?resize=1200:*" alt="pork chops">
-                    <h5>Pork chops</h5>
-                    <p>Cuisine: America</p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.keyingredient.com/media/ec/e2/8ae66a350cb0a99eea34806a892cc989d3a3.jpg/rh/fresh-old-fashioned-polish-sausage.jpg" alt="kielbasa sausage">
-                    <h5>kielbasa sausage</h5>
-                    <p>Cuisine: Poland</p>
-                </div>
-                <div class="pod">
-                    <img src="https://i0.wp.com/thehonestbison.com/wp-content/uploads/Bison_Sirloin_2.jpg?fit=1000%2C1000&ssl=1" alt="beef striploin">
-                    <h5>Beef striploin</h5>
-                    <p>Cuisine: Australia</p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.innit.com/public/recipes/images/1033177-1759476299-en-US-0_s1000.jpg" alt="bison sirloin">
-                    <h5>Bison sirloin</h5>
-                    <p>Cuisine: America</p>
-                </div>
-                <div class="pod">
-                    <img src="https://p1-tt-ipv6.byteimg.com/origin/pgc-image/6f9f40e6d05b4a57b4458efce95f75dc.jpg" alt="dried shrimp skin">
-                    <h5>Dried shrimp skin</h5>
-                    <p>Cuisine: China</p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.acouplecooks.com/wp-content/uploads/2020/05/Grilled-Salmon-015-1.jpg" alt="grilled salmon">
-                    <h5>Grilled salmon</h5>
-                    <p>Cuisine: Russia</p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.allrecipes.com/thmb/3cvtboRzz8aVtgf0ly1Fs_gaPTQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/7894897-b2e5c569f105486f8c1f826dfeecf314.jpg" alt="tilapia fillets">
-                    <h5>Tilapia fillets</h5>
-                    <p>Cuisine: China</p>
-                </div>
-                <div class="pod">
-                    <img src="https://simplelivingrecipes.com/wp-content/uploads/2022/06/baby-octopus-recipe-c.jpg" alt="baby octopus vulgaris">
-                    <h5>Baby octopus vulgaris</h5>
-                    <p>Cuisine: Korea</p>
-                </div>
-                <div class="pod">
-                    <img src="https://assets.wakefern.com/is/image/wakefern/3707140004-003?$Mi9Product_detail$" alt="boned salted pollock">
-                    <h5>Boned salted pollock</h5>
-                    <p>Cuisine: China</p>
-                </div>
+        </div>
+        <!--
+        ==================== Video Tutorial Section  ====================
+        -->
+        <div class="video-tutorial">
+            <h3>Video Tutorial</h3>
+            <div class="video">
+                <iframe id="video" width="100%" height="100%"
+                    src="https://www.youtube.com/embed/Czbz9jbU6nE"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
             </div>
- <!--  ================  PASTRIES  ================-->
-            <div id="pastries" class="group">
-                <div id="pastries" class="pod">
-                    <img src="https://www.mygorgeousrecipes.com/wp-content/uploads/2021/07/Romanian-Cheese-Pastries-5.jpg"alt="cheese pastry">
-                    <h5>Cheese pastry</h5>
-                    <p>Cuisine: American</p>
+            <h4 id="foodN"></h4>
+            <p>You can watch the video on youtube <a href="https://www.youtube.com/embed/Czbz9jbU6nE">here</a></p>
+        </div>
+        <!--
+        ==================== More Options Section  ====================
+        -->
+        <div class="more-section">
+            <h3>You May also Like</h3>
+            <div class="more snaps-inline">
+                <div class="more-card">
+                    <img src="Images/backgrounds/cat-starch.jpg" alt="food image">
+                    <h5>Flavor Profiling</h5>
+                    <p>Ever wondered what makes a</p>
                 </div>
-                <div class="pod">
-                    <img src="https://preppykitchen.com/wp-content/uploads/2021/05/Puff-Pastry-Feature.jpg"alt="puff pastry">
-                    <h5>Puff pastry</h5>
-                    <p>Cuisine: American</p>
+                <div class="more-card">
+                    <img src="Images/uncompressed/more2.jpg" alt="food image">
+                    <h5>Flavor Profiling</h5>
+                    <p>Ever wondered what makes a</p>
                 </div>
-                <div class="pod">
-                    <img src="https://www.specialk.ca/content/dam/NorthAmerica/specialk_ca/en_CA/images/products/products-crisps.png"alt="pastry crisps">
-                    <h5>Pastry crisps</h5>
-                    <p>Cuisine: American</p>
+                <div class="more-card">
+                    <img src="Images/backgrounds/cat-meat.jpg" alt="food image">
+                    <h5>Flavor Profiling</h5>
+                    <p>Ever wondered what makes a</p>
                 </div>
-                <div class="pod">
-                    <img src="https://images.immediate.co.uk/production/volatile/sites/2/2020/02/OLI-0220_Everyday-SalmonChardPie_02033_preview-f08e194.jpg?quality=90&crop=3px,374px,1257px,541px&resize=556,505"alt="fillo pastry">
-                    <h5>Fillo pastry</h5>
-                    <p>Cuisine: Turkey</p>
+                <div class="more-card">
+                    <img src="Images/uncompressed/more3.jpg" alt="food image">
+                    <h5>Flavor Profiling</h5>
+                    <p>Ever wondered what makes a</p>
                 </div>
-                <div class="pod">
-                    <img src="https://i0.wp.com/sweetordeal.com/wp-content/uploads/2021/02/012-600x1200-1.jpg?resize=600%2C1200&ssl=1"alt="pastry fruit-filled">
-                    <h5>Pastry fruit-filled</h5>
-                    <p>Cuisine: Italian</p>
+                <div class="more-card">
+                    <img src="Images/backgrounds/fav4.jpg" alt="food image">
+                    <h5>Flavor Profiling</h5>
+                    <p>Ever wondered what makes a</p>
                 </div>
-                <div class="pod">
-                    <img src="https://www.snowflake.co.za/simple-files/5e75829c17a54b87a52f2ee49985fe5e/flaky-pastry.jpg"alt="flaky pastry">
-                    <h5>Flaky pastry</h5>
-                    <p>Cuisine: American</p>
-                </div>
-                <div class="pod">
-                    <img src="https://img-global.cpcdn.com/recipes/615955edcd3f1913/1200x630cq70/photo.jpg"alt="spring roll pastry">
-                    <h5>Spring roll pastry</h5>
-                    <p>Cuisine: Malaysia</p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.chsugar.com/sites/chsugar_com/files/2022-09/Web_Recipe_Description_Image-GuavaPastries.jpg"alt="guava pastries">
-                    <h5>Guava pastries"</h5>
-                    <p>Cuisine: Brazil</p>
-                </div>
-                <div class="pod">
-                    <img src="https://visitproseccoitaly.com/wp-content/uploads/2022/02/Italian-Desserts-cannoli.jpg"alt="pastry italian with cheese">
-                    <h5>Pastry italian with cheese</h5>
-                    <p>Cuisine: Italy</p>
-                </div>
-                <div class="pod">
-                    <img src="https://ipcdn.freshop.com/resize?url=https://images.freshop.com/00760064124028/4f8b078efd94bce72461be72edcd0331_large.png&width=512&type=webp&quality=90"alt="vanilla panque">
-                    <h5>Vanilla panque</h5>
-                    <p>Cuisine: Italy</p>
-                </div>
-            </div>
-<!--  ================  FRUITS  ================-->
-            <div id="fruits" class="group">
-                <div class="pod">
-                    <img src="https://target.scene7.com/is/image/Target/GUEST_72a4aeab-859e-4796-b0f7-3644297e3527?wid=488&hei=488&fmt=pjpeg" alt="naked protein juice smoothie berry">
-                    <h5>Naked protein juice smoothie berry</h5>
-                    <p>Cuisine: America</p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.goya.com/media/1172/blackberry-fruit-pulp.png?height=366" alt="fruta whole blackberry">
-                    <h5>Fruta whole blackberry</h5>
-                    <p>Cuisine: America</p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.halfbakedharvest.com/wp-content/uploads/2016/04/Rocky-Road-Pudding-Parfaits-7.jpg" alt="rocky road pudding parfait">
-                    <h5>Rocky road pudding parfait</h5>
-                    <p>Cuisine: America</p>
-                </div>
-                <div class="pod">
-                    <img src="https://target.scene7.com/is/image/Target/GUEST_00ad68bb-2647-46d8-8b07-b1e488a08e2a?wid=488&hei=488&fmt=pjpeg" alt="protein juice smoothie">
-                    <h5>Protein juice smoothie</h5>
-                    <p>Cuisine: America</p>
-                </div>
-                <div class="pod">
-                    <img src="https://images.freshop.com/00075370001018/7782a039ba72b4f374b87f108fdfd39a_large.png" alt="guava shells">
-                    <h5>Guava shells</h5>
-                    <p>Cuisine: Cuba</p>
-                </div>
-                <div class="pod">
-                    <img src="https://i1.wp.com/mayakitchenette.com/wp-content/uploads/2018/08/Blue-smoothie-Recipe-3.jpg?ssl=1" alt="blue smoothie">
-                    <h5>Blue smoothie</h5>
-                    <p>Cuisine: America</p>
-                </div>
-                <div class="pod">
-                    <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/11/8/0/BXSP03H_Cranberry-Sauce_s4x3.jpg.rend.hgtvcom.406.406.suffix/1447093965462.jpeg" alt="cranberry sauce whole berry">
-                    <h5>Cranberry sauce whole berry</h5>
-                    <p>Cuisine: America/p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.slenderkitchen.com/sites/default/files/styles/gsd-1x1/public/recipe_images/coconut-chia-seed-pudding.jpg" alt="banana chia in coconut milk">
-                    <h5>Banana chia in coconut milk</h5>
-                    <p>Cuisine: America/p>
-                </div>
-                <div class="pod">
-                    <img src="https://mms.businesswire.com/media/20150420006497/en/463593/5/Slide1.jpg?download=1" alt="vegetable & fruit juice blend">
-                    <h5>Vegetable & fruit juice blend</h5>
-                    <p>Cuisine: America</p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.foodandwine.com/thmb/mQRg1X-X9XD547Fiu177BkyUl4Y=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Tanghulu-Candied-Fruit-Skewers-FT-RECIPE0622-4d39d6a1a89c442c9f1cafb923dceefb.jpg" alt="candied fruit">
-                    <h5>Candied fruit</h5>
-                    <p>Cuisine: China</p>
-                </div>
-            </div>
-<!--  ================  VEGAN ================-->
-            <div id="vegan" class="group">
-                <div class="pod">
-                    <img src="https://www.bienmanger.com/tinyMceData/images/contents/637/content_lg.jpg" alt="potato flour">
-                    <h5>Potato flour</h5>
-                    <p>Cuisine: America</p>
-                </div>
-                <div class="pod">
-                    <img src="https://hips.hearstapps.com/hmg-prod/images/friedeggplant-recipe-2-1648493047.jpg?crop=0.6666666666666667xw:1xh;center,top&resize=1200:*" alt="fried eggplant">
-                    <h5>Fried eggplant</h5>
-                    <p>Cuisine: America/p>
-                </div>
-                <div class="pod">
-                    <img src="https://mexicanappetizersandmore.com/wp-content/uploads/How-to-Cook-Canned-Black-Beans-FB.png" alt="black beans">
-                    <h5>Black beans</h5>
-                    <p>Cuisine: Spain</p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.evolvingtable.com/wp-content/uploads/2019/11/How-to-Boil-Sweet-Potatoes-10-500x400.jpg" alt="boiled sweet potatoes">
-                    <h5>Boiled sweet potatoes</h5>
-                    <p>Cuisine: Nigeria</p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.allrecipes.com/thmb/mZfBazoEsKCUoqYOuXuCi--D6jQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/13478-sweet-potato-casserole-II-mfs302-032f142759794db4b4c538837595db2f.jpg" alt="candied yams">
-                    <h5>Candied yams</h5>
-                    <p>Cuisine: America/p>
-                </div>
-                <div class="pod">
-                    <img src="https://2.bp.blogspot.com/-kh133Lp0dYM/UgwMT5Khp8I/AAAAAAAAEoA/xl4WhoMUVjM/s1600/SAM_9623.JPG" alt="whole yellow peas">
-                    <h5>Whole yellow peas</h5>
-                    <p>Cuisine: America/p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.dinneratthezoo.com/wp-content/uploads/2018/03/broccoli-with-cheese-sauce-4.jpg" alt="broccoli with cheese sauce">
-                    <h5>Broccoli with cheese sauce</h5>
-                    <p>Cuisine: America/p>
-                </div>
-                <div class="pod">
-                    <img src="https://goldentropics.com/wp-content/uploads/2013/02/Egusi-Soup-and-Pounded-Yam-420x280_c.jpg" alt="nigerian pounded yam">
-                    <h5>Nigerian pounded yam</h5>
-                    <p>Cuisine: Nigeria</p>
-                </div>
-                <div class="pod">
-                    <img src="https://www.maricruzavalos.com/wp-content/uploads/2019/08/tamales_de_elote_dulces.jpg" alt="corn tamales">
-                    <h5>Corn tamales</h5>
-                    <p>Cuisine: Mexico</p>
-                </div>
-                <div class="pod">
-                    <img src="https://images.ctfassets.net/qu53tdnhexvd/bJ2cSuGmXeou4AW2CucUa/af50d8c461f7f7791c667ec5f67c9fee/Roasted_pumpkin_with_chilli_spiked_crumb_54026.jpg?w=1080&h=1080" alt="roasted pumpkin">
-                    <h5>roasted pumpkin</h5>
-                    <p>Cuisine: Canada</p>
+                <div class="more-card">
+                    <img src="Images/uncompressed/more5.jpg" alt="food image">
+                    <h5>Flavor Profiling</h5>
+                    <p>Ever wondered what makes a</p>
                 </div>
             </div>
         </div>
@@ -593,22 +222,19 @@
       <footer id="contact">
         <div class="first-sect">
             <div class="logo-box">
-                <a href="#"><img class="footer_logo" src="Images/logo/Logo.png" alt="Foodlens logo"></a>
+                <a class="logo" href="home.html"><img src="Images/logo/Logo.png" alt="Foodlens logo">FoodLENS</a>
                 <ul class="footer mode">
-                    <li>Love our work?</li>
-                    <li>Contact us >></li>
+                    <li id="tt">Love our work? Contact us</li>
                     <li id="toggle-mode">Dark/Light mode</li>
+                    <li id="logout">Log out</li>
                 </ul>
             </div>
             <ul class="footer">
                 <li>Elvis Oguoma O.</li>
-                <li><a href="#"><button id="socials">
-                    <img src="Images/logo/whatsapp.png" alt="whatsapp">
-                </button>Whatsapp</a></li>
-                <li><a href="#"><button id="socials">
+                <li><a href="https://www.linkedin.com/in/elvis-oguoma-66a77318a"><button id="socials">
                     <img src="Images/logo/linkedin.png" alt="linkedin">
                 </button>Linkedin</a></li>
-                <li><a href="#"><button id="socials">
+                <li><a href="https://www.twitter.com/r0elle"><button id="socials">
                     <img src="Images/logo/twitter.png" alt="twitter">
                 </button>Twitter</a></li>
                 <li><a href="elvisrozy52@gmail.com"><button id="socials">
@@ -617,13 +243,10 @@
             </ul>
             <ul class="footer">
                 <li>Aralu Kenechukwu C.</li>
-                <li><a href="#"><button id="socials">
-                    <img src="Images/logo/whatsapp.png" alt="whatsapp">
-                </button>Whatsapp</a></li>
-                <li><a href="#"><button id="socials">
+                <li><a href="https://www.linkedin.com/in/kenechukwu-aralu-1b7238207"><button id="socials">
                     <img src="Images/logo/linkedin.png" alt="linkedin">
                 </button>Linkedin</a></li>
-                <li><a href="#"><button id="socials">
+                <li><a href="https://twitter.com/aralukene"><button id="socials">
                     <img src="Images/logo/twitter.png" alt="twitter">
                 </button>Twitter</a></li>
                 <li><a href="junioraralu@gmail.com"><button id="socials">
@@ -632,13 +255,10 @@
             </ul>
             <ul class="footer">
                 <li>Aweda Ifeoluwa</li>
-                <li><a href="#"><button id="socials">
-                    <img src="Images/logo/whatsapp.png" alt="whatsapp">
-                </button>Whatsapp</a></li>
-                <li><a href="#"><button id="socials">
+                <li><a href="https://ng.linkedin.com/in/aweda-ifeoluwa-b91b9976"><button id="socials">
                     <img src="Images/logo/linkedin.png" alt="linkedin">
                 </button>Linkedin</a></li>
-                <li><a href="#"><button id="socials">
+                <li><a href="https://twitter.com/LovethSir"><button id="socials">
                     <img src="Images/logo/twitter.png" alt="twitter">
                 </button>Twitter</a></li>
                 <li><a href="ifeI1939@gmail.com"><button id="socials">
@@ -653,9 +273,10 @@
     </footer>
     <!--
     ==================== JavaScript File  ====================
-      -->
-    <script src="app/js/categories.js"></script>
-    <script src="app/js/globals.js"></script>
+    -->
     <script src="app/js/header.js"></script>
+    <script src="app/js/globals.js"></script>
+     <script src="/app/js/categories.js"></script>
+    <script src="/app/js/searchBar.js"></script>
 </body>
 </html>

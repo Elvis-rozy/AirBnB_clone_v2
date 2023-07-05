@@ -9,7 +9,6 @@ Dashboard Setup
 .dash-hero {
     background: linear-gradient(to right, rgb(240, 240, 240),
     rgb(143 141 141), rgb(215 213 213));
-    @include width-height ("100%", "100vh");
     grid-template-columns: .6fr 1.1fr 1.2fr;
     color: var(--text);
     padding: 30px;
@@ -128,19 +127,19 @@ Dashboard Setup
             background: linear-gradient(45deg, rgb(75 75 126), rgb(247 172 114));
             flex-direction: column;
             border-radius: 0 20px;
-            position: absolute;
+            position: relative;
             padding: 20px;
             transition: 1s;
             display: flex;
             gap: 20px;
 
-            .personal-info, .diet-comp, .tolerance, .meal-info {
+            form, .diet-comp, .tolerance, .meal-info {
                 flex-direction: column;
                 display: flex;
             }
 
-            .personal-info, .tolerance {
-                gap: 20px;
+            form, .tolerance {
+                gap: 30px;
             }
 
             .diet-comp {
@@ -154,6 +153,16 @@ Dashboard Setup
             .input-box {
                 position: relative;
                 width: 350px;
+
+                img {
+                    margin-right: 20px;
+                    position: absolute;
+                    cursor: pointer;
+                    bottom: 25%;
+                    width: 20px;
+                    right: 0;
+                }
+
 
                 label {
                     transform: translateY(-50%);
@@ -207,6 +216,7 @@ Dashboard Setup
 
     .dash-hero {
         grid-template-columns: .7fr 1.3fr;
+        height: 100vh;
 
         .middle {
             display: none;
@@ -214,19 +224,22 @@ Dashboard Setup
     }
 
     #head {
-        width: 100%;
         border-radius: 0;
+        width: 100%;
     }
 
     @media (max-width: 550px) {
 
         .dash-hero {
             @include Display-align ("flex", "start");
-            padding: 10vh 20px 30px;
             flex-direction: column;
+            padding: 13vh 0 0;
+            height: auto;
+            gap: 0;
 
             .left {
-                flex-direction: row;
+                display: flex;
+                flex-direction: column;
 
                 h2 {
                     margin-bottom: 0;
@@ -244,17 +257,20 @@ Dashboard Setup
 
             .right {
                 justify-content: start;
+                height: 100vh;
                 width: 100%;
 
                 .profile-details {
+                    padding: 20px;
                     margin-top: 0;
                 }
 
                 .profile-edit {
                    @include width-height ("100%", "100vh");
-                    align-items: center;
+                   align-items: center;
+                   position: absolute;
                     border-radius: 0;
-                    top: 10vh;
+                    top: 12vh;
                 }
 
                 .profile-submit {
@@ -267,13 +283,4 @@ Dashboard Setup
             padding: 30px 10px;
         }
     }
-}
-
-.invisible {
-    filter: blur(50px);
-    transform: translateX(200%);
-}
-
-.visible {
-    transform: translateX(0);
 }

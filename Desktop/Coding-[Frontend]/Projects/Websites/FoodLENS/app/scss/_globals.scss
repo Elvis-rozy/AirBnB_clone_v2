@@ -33,44 +33,45 @@ body {
 /*=========================================
 Dark mode/ Light mode Styles
 =========================================*/
-.light-mode {
-    background: linear-gradient(45deg, #76005d99,
-     #ff7bb8, #76005d99, #9760c9, #9593ffad);
-    color: #333;
-  }
+.dark-mode {
+    background: black;
+    color: #bca1c7e8;
+    box-shadow: none;
+}
+//index page dark-mode
+body.dark-mode .new-section .about-cards .about-card,
+body.dark-mode footer,
+body.dark-mode footer .footer li a {
+    background: rgb(0 0 0 / 58%);
+    color: #bca1c7e8;
+
+    &:hover {
+        box-shadow: none;
+    }
+}
+
+body.dark-mode .trust .tools .cards .card {
+    background: rgb(38 38 38 / 52%);
+}
+
+body.dark-mode .review-cards .review-card {
+    box-shadow: 1px 1px 3px rgb(153, 153, 153);
+    background: rgb(0 0 0 / 58%);
+    color: #bca1c7e8;
+}
+
+body.dark-mode #favorites .favs .fav {
+    box-shadow: none;
+
+    &:hover {
+        box-shadow: none;
+    }
+}
+
 
 /*=========================================
 Button Styles
 =========================================*/
-
-/* button {
-    min-width: 100px;
-    min-height: 38px;
-    background: #e7e7e7;
-    box-shadow: 4px 4px 12px #262626;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-    color: #0d0d25;
-    text-transform: capitalize;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    outline: none !important;
-    transition: .3s;
-    font-weight: 700;
-    overflow: hidden;
-    position: relative;
-
-    &:hover {
-        color: var(--cta);
-        transform: scale(.97);
-        border-color: #0d0d25;
-        box-shadow: inset 9px 9px 12px #cccccc, inset -9px -9px 12px #ffffff;
-    }
-}
- */
 button {
     @include Display-align-justify ("inline-flex", "center", "center");
     box-shadow: 0 5px 5px rgba(0, 0, 0, .62);
@@ -87,23 +88,23 @@ button {
 
     &::before {
         content: '';
-        position: absolute;
         top: 0;
         left: 0;
         width: 50%;
         height: 100%;
+        position: absolute;
         background: rgb(255,255,255,.1);
     }
 
     &::after {
         content: '';
-        position: absolute;
         top: 0;
         left: -100%;
         width: 100%;
         height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
         transition: .5s;
+        position: absolute;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
     }
 
     &:hover::after {
@@ -112,8 +113,8 @@ button {
 
     & span {
         position: absolute;
-        display: block;
         transition: .5s;
+        display: block;
 
         &:nth-child(1) {
             top: 0;
@@ -126,8 +127,8 @@ button {
         &:nth-child(2) {
             top: 0;
             left: 0;
-            width: 1px;
             height: 0;
+            width: 1px;
             background: #fff;
         }
 
@@ -142,30 +143,30 @@ button {
         &:nth-child(4) {
             bottom: 0;
             right: 0;
-            width: 1px;
             height: 0;
+            width: 1px;
             background: #fff;
         }
     }
 
     &:hover span:nth-child(1) {
-        width: 100%;
         transform: translateX(100%);
+        width: 100%;
     }
 
     &:hover span:nth-child(2) {
-        height: 100%;
         transform: translateY(100%);
+        height: 100%;
     }
 
     &:hover span:nth-child(3) {
-        width: 100%;
         transform: translateX(-100%);
+        width: 100%;
     }
 
     &:hover span:nth-child(4) {
-        height: 100%;
         transform: translateY(-100%);
+        height: 100%;
     }
 
     &:hover {
@@ -242,12 +243,16 @@ Mobile menu Styles
         @include width-height ("100%", "100%");
         flex-direction: column;
 
+        li:last-child {
+            margin-right: 30px;
+        }
+
         li{
             padding: 20px 0;
             transition: .3s;
 
             a {
-                color: var(--white);
+                color: var(--background-light-gray);
                 transition: .3s;
             }
 
@@ -261,8 +266,4 @@ Mobile menu Styles
             }
         }
     }
-}
-
-footer .copy_right button {
-    border-radius: 50%;
 }

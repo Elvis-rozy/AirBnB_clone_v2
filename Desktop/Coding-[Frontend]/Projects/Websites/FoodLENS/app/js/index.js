@@ -11,7 +11,6 @@ const observer = new IntersectionObserver((entries) => {
         }
     })
 })
-
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((elem) => observer.observe(elem));
 
@@ -28,13 +27,13 @@ setInterval(() => {
     if (Src == "Images/profiles/prof-1.jpg") {
         myImage.setAttribute("src", "Images/profiles/prof-2.jpg");
         Heading.textContent = ("James Billway")
-        info.textContent = ("Norem ipsum dolor sit amet consecteturn");
-        details.textContent = ("elit. Commodi, consequatur error illo laudantiu corrupti expedita adipisci repellendus corporis, accusantium neque ipsum quidem similique aliquid odit necessitatibus esse dolorom");
-    }else if (Src == "Images/profiles/prof-2.jpg") {
+        info.textContent = ("Busy high school teacher with a sweet tooth");
+        details.textContent = ("I used to give-in to my hunger for sugary treats but was recommended controlled and healthier alternatives from the use of foodlens");
+    } else if (Src == "Images/profiles/prof-2.jpg") {
         myImage.setAttribute("src", "Images/profiles/prof-3.jpg");
         Heading.textContent = ("Emily Anthlers")
-        info.textContent = ("Norem ipsum dolor sit amet consecteturn");
-        details.textContent = ("Commodi, consequatur error illo laudantiu corrupti expedita adipisci repellendus corporis, accusantium neque ipsum quidem similique aliquid odit necessitatibus esse dolorom");
+        info.textContent = ("I basically live in the kitchen as I'm in love with cooking");
+        details.textContent = ("Running a restaurant whilst being a foodie, i tend to engulf my self in new and healthy food trends and serving quality meals is everything to me.");
     } else {
         myImage.setAttribute("src", "Images/profiles/prof-1.jpg");
         Heading.textContent = ("Martha Lindsay");

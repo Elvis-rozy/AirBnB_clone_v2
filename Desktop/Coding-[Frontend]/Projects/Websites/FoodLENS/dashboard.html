@@ -15,7 +15,7 @@
     -->
     <header id="head">
         <nav>
-            <a href="home.html"><img class="header_logo" src="Images/logo/Logo.png" alt="Foodlens logo"></a>
+            <a class="logo" href="home.html"><img src="Images/logo/Logo.png" alt="Foodlens logo">FoodLENS</a>
             <!--
             ==================== Mobile menu Icon  ====================
             -->
@@ -31,8 +31,8 @@
                 <ul class="lnk">
                     <li class="hide-for-desktop lnk"><a href="home.html">Home</a></li> <!--
                 --><li class="hide-for-desktop lnk Edit"><a href="#">Profile</a></li><!--
-                --><li class="hide-for-desktop lnk edit"><a href="#">Edit Profile</a></li> <!--
-                --><li class="hide-for-desktop lnk"><a href="categories.html">Categories</a></li><!--
+                --><li class="hide-for-desktop lnk edit"><a href="dashboard-edit.html">Edit Profile</a></li> <!--
+                --><li class="hide-for-desktop lnk"><a href="categoriesAll.html">Categories</a></li><!--
                 --><li class="hide-for-desktop lnk"><a href="#contact">Contact Us</a></li>
                 </ul>
             </div>
@@ -43,10 +43,10 @@
             <img class="dash-pic hide-for-desktop" src="Images/profiles/profile-Hero.jpg" alt="profile image">
             <h2>Hi Tristan</h2>
             <div class="bars">
-                <a id="editt"  href="#"><button class="Active">Dashboard</button></a>
-                <a id="edit" href="#"><button class="edit-btn">Edit Profile</button></a>
+                <a href="#"><button class="Active">Dashboard</button></a>
+                <a href="dashboard-edit.html"><button class="edit-btn">Edit Profile</button></a>
                 <a href="home.html"><button class="home-btn">Home</button></a>
-                <a href="categories.html"><button class="cat-btn">Categories</button></a>
+                <a href="categoriesAll.html"><button class="cat-btn">Categories</button></a>
                 <a href="#contact"><button class="contct-btn">Contact Us</button></a>
             </div>
         </div>
@@ -90,54 +90,6 @@
                 <h5>Allergens</h5>
                 <p>Dairy, Peanut and Yeast</p>
             </div>
-            <div class="profile-edit invisible">
-                <div class="personal-info">
-                    <h3>Personal Info</h3>
-                    <div class="input-box spec1">
-                        <input class="input" type="name" id="name" name="name" required>
-                        <label for="name">Username</label>
-                    </div>
-                    <div class="input-box spec1">
-                        <input class="input" type="email" id="email" name="email" required>
-                        <label for="email">Email</label>
-                    </div>
-                    <div class="input-box spec1">
-                        <input class="input" type="password" id="password" name="password" required>
-                        <label for="password">Password</label>
-                    </div>
-                    <div class="input-box spec1">
-                        <input class="input" type="text" id="bio" name="bio" placeholder="eg. I'm an athlete with fairly average culinary skills..." required>
-                        <label for="bio">Bio</label>
-                    </div>
-                </div>
-                <div class="meal-info">
-                    <div class="diet-comp">
-                        <div class="input-box">
-                            <label for="preference" id="percents-label">Carbohydrates</label>
-                            <input class="percents" type="number" id="preference" name="preference" placeholder="%" required>
-                        </div>
-                        <div class="input-box">
-                            <label for="allergens" id="percents-label">Proteins</label>
-                            <input class="percents" type="number" id="allergens" name="allergens"  placeholder="%" required>
-                        </div>
-                        <div class="input-box">
-                            <label for="preference" id="percents-label">Fats</label>
-                            <input class="percents" type="number" id="preference" name="preference" placeholder="%" required>
-                        </div>
-                    </div>
-                    <div class="tolerance">
-                        <div class="input-box spec1">
-                            <input class="input" type="text" id="preference" name="preference" placeholder="eg. bromate free, low fats etc" required>
-                            <label for="preference">Meal Preference</label>
-                        </div>
-                        <div class="input-box spec1">
-                            <input class="input" type="text" id="allergens" name="allergens"  placeholder="eg. almond, cream etc" required>
-                            <label for="allergens">Allergens</label>
-                        </div>
-                    </div>
-                </div>
-                <button><input type="submit" class="profile-submit" value="Save Changes"></button>
-            </div>
         </div>
     </section>
     <!--
@@ -146,22 +98,19 @@
       <footer id="contact">
         <div class="first-sect">
             <div class="logo-box">
-                <a href="#"><img class="footer_logo" src="Images/logo/Logo.png" alt="Foodlens logo"></a>
+                <a class="logo" href="home.html"><img src="Images/logo/Logo.png" alt="Foodlens logo">FoodLENS</a>
                 <ul class="footer mode">
-                    <li>Love our work?</li>
-                    <li>Contact us >></li>
+                    <li id="tt">Love our work? Contact us</li>
                     <li id="toggle-mode">Dark/Light mode</li>
+                    <li id="logout">Log out</li>
                 </ul>
             </div>
             <ul class="footer">
                 <li>Elvis Oguoma O.</li>
-                <li><a href="#"><button id="socials">
-                    <img src="Images/logo/whatsapp.png" alt="whatsapp">
-                </button>Whatsapp</a></li>
-                <li><a href="#"><button id="socials">
+                <li><a href="https://www.linkedin.com/in/elvis-oguoma-66a77318a"><button id="socials">
                     <img src="Images/logo/linkedin.png" alt="linkedin">
                 </button>Linkedin</a></li>
-                <li><a href="#"><button id="socials">
+                <li><a href="https://www.twitter.com/r0elle"><button id="socials">
                     <img src="Images/logo/twitter.png" alt="twitter">
                 </button>Twitter</a></li>
                 <li><a href="elvisrozy52@gmail.com"><button id="socials">
@@ -170,13 +119,10 @@
             </ul>
             <ul class="footer">
                 <li>Aralu Kenechukwu C.</li>
-                <li><a href="#"><button id="socials">
-                    <img src="Images/logo/whatsapp.png" alt="whatsapp">
-                </button>Whatsapp</a></li>
-                <li><a href="#"><button id="socials">
+                <li><a href="https://www.linkedin.com/in/kenechukwu-aralu-1b7238207"><button id="socials">
                     <img src="Images/logo/linkedin.png" alt="linkedin">
                 </button>Linkedin</a></li>
-                <li><a href="#"><button id="socials">
+                <li><a href="https://twitter.com/aralukene"><button id="socials">
                     <img src="Images/logo/twitter.png" alt="twitter">
                 </button>Twitter</a></li>
                 <li><a href="junioraralu@gmail.com"><button id="socials">
@@ -185,13 +131,10 @@
             </ul>
             <ul class="footer">
                 <li>Aweda Ifeoluwa</li>
-                <li><a href="#"><button id="socials">
-                    <img src="Images/logo/whatsapp.png" alt="whatsapp">
-                </button>Whatsapp</a></li>
-                <li><a href="#"><button id="socials">
+                <li><a href="https://ng.linkedin.com/in/aweda-ifeoluwa-b91b9976"><button id="socials">
                     <img src="Images/logo/linkedin.png" alt="linkedin">
                 </button>Linkedin</a></li>
-                <li><a href="#"><button id="socials">
+                <li><a href="https://twitter.com/LovethSir"><button id="socials">
                     <img src="Images/logo/twitter.png" alt="twitter">
                 </button>Twitter</a></li>
                 <li><a href="ifeI1939@gmail.com"><button id="socials">

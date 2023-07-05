@@ -41,7 +41,7 @@ About Setup
 
     .about {
         background-image: url('/images/backgrounds/header-bg.png');
-        @include background-size-position-repeat ("contain", "center", "no-repeat");
+        @include background-size-position-repeat ("cover", "center", "repeat");
         @include Display-align("flex", "center");
         padding: 40px 40px 80px;
         overflow-x: hidden;
@@ -79,14 +79,14 @@ About Setup
         }
 
         .first-box img, .second-box img {
-            @include width-height("300px", "350px");
+            @include width-height("350px", "350px");
         }
     }
 }
 
 .new-section {
     background-image: url('/images/backgrounds/header-bg.png');
-    @include background-size-position-repeat ("contain", "center", "no-repeat");
+    @include background-size-position-repeat ("cover", "center", "repeat");
     overflow-x: hidden;
     padding: 0 60px;
     text-align: start;
@@ -110,7 +110,7 @@ About Setup
             @include Display-align("flex", "center");
             background: rgb(245, 245, 245);
             flex-direction: column;
-            border-radius: 20px;
+            border-radius: 3px;
             overflow: hidden;
             position: relative;
             transition: .3s;
@@ -123,7 +123,7 @@ About Setup
 
             &:hover {
                 box-shadow: 1px 4px 6px rgb(153, 153, 153);
-                transform: scale(1.1);
+                transform: scale(1.05);
             }
 
             img {
@@ -165,12 +165,27 @@ Mobile and Tab setup
                 transform: rotate(0);
             }
 
+            .first-box, .second-box {
+                flex-direction: row;
+                align-items: start;
+
+                p {
+                    text-align: start;
+                }
+            }
+
             .first-box {
                 margin-right: 0;
                 margin-bottom: 30px;
 
                 p {
                     padding-right: 0;
+                }
+            }
+            @media(max-width: 550px) {
+
+                .first-box img, .second-box img {
+                    display: none;
                 }
             }
 

@@ -1,46 +1,58 @@
 header {
     box-shadow: none;
 }
-.categories {
-    position: relative;
-    height: auto;
 
-    .buttons {
-        position: fixed;
+.categories {
+    text-align:center;
+
+    .cat-header {
         border-bottom: 1px solid rgba(189, 188, 188, 0.32);
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        align-items: center;
+        padding-top: 13vh;
+        position: fixed;
         width: 100%;
         background: white;
-        padding: 15vh 30px 10px;
         z-index: 3;
 
-        .small {
-            color: var(--text);
-            color: rgb(134 134 135);
-            transition: .3s;
-            font-size: 18px;
+        h2 {
+            padding-bottom: 20px;
+            color: var(--cta);
+        }
 
-            &:hover {
-                color: var(--cta);
-                font-weight: 700;
-                font-size: 24px;
+        .buttons {
+            height: 30px;
+            display: grid;
+            place-items: center;
+            grid-template-columns: repeat(6, 1fr);
+
+            .btn {
+                color: rgb(134 134 135);
+                cursor: pointer;
+                font-size: 16px;
+                font-weight: 500;
+                transition: .3s;
+
+                &:hover {
+                    color: var(--cta);
+                    font-weight: 700;
+                    font-size: 20px;
+                }
             }
         }
     }
 
-    .group {
+    .section-center {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        padding: 25vh 50px 50px;
-        gap: 30px;
+        padding: 30vh 50px 40px;
+        gap: 40px 25px;
 
-        .pod {
-            background: white;
-            width: 100%;
-            height: 180px;
+        .menu-item {
+            display: flex;
+            flex-direction: column;
             position: relative;
+            height: 170px;
+            overflow: hidden;
+            border-radius: 30px 0;
             transition: .3s;
 
             &:hover {
@@ -48,34 +60,68 @@ header {
                 transform: scale(1.03);
             }
 
-            img {
+            .photo {
                 width: 100%;
                 height: 100%;
             }
 
-            h5, p {
-                position: absolute;
-                text-align: start;
-                padding: 3px 10px 3px;
-                background: var(--white);
-                border-radius: 0 10px 0 0;
-            }
-
-            h5 {
-                bottom: 15px;
-                font-size: 14px;
-            }
-
-            p {
+            .item-info {
+                padding: 5px 10px 5px 5px;
                 bottom: 0;
-                font-size: 10px;
+                background: white;
+                border-radius: 0 15px 0 0;
+                position: absolute;
+                display: flex;
+                gap: 5px;
+                flex-direction: column;
+
+                h4, p {
+                    text-align: start;
+                }
             }
         }
     }
 }
 
-.big {
-    color: var(--cta);
-    font-weight: 700;
-    font-size: 24px;
+.Grid {
+    display: grid;
+}
+
+.Hide {
+    display: none;
+}
+/*
+=========================================
+Mobile and Tab setup
+=========================================
+*/
+@media (max-width: 950px) {
+
+    .categories .section-center {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 25vh 20px 30px;
+    }
+
+    @media (max-width: 550px){
+
+        header nav .search-form input {
+            width: 200px;
+        }
+
+        .categories .section-center {
+            grid-template-columns: repeat(2, 1fr);
+            padding: 33vh 20px 30px;
+        }
+
+        .categories .cat-header .buttons {
+            grid-template-columns: repeat(3, 1fr);
+            height: 80px;
+
+            .btn {
+                &:hover {
+                    font: 17px;
+                }
+            }
+        }
+    }
 }

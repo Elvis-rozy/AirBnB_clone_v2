@@ -21,18 +21,21 @@
 
         .fav {
             @include Display-align-justify ("flex", "start", "center");
-            background-color: rgb(50 50 56 / 25%);
+            background-color: rgb(188 188 255 / 13%);
+            box-shadow: 14px 12px 6px #78767678;
             flex-direction: column;
-            border-radius: 10px;
+            border-radius: 3px;
             overflow: hidden;
+            transition: .3s;
+
+            &:hover {
+                transform: scale(.97);
+                box-shadow: inset 11px -12px 6px #938f8f52;
+            }
 
             #fav1 {
                 @include width-height ("100%", "250px");
                 transition: .3s;
-
-                &:hover {
-                    transform: scale(1.05);
-                }
             }
 
             h4 {

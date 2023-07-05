@@ -45,13 +45,14 @@ header {
     @include background-size-position-repeat ("contain", "top", "repeat");
     @include width-height ("100%", "auto");
     grid-template-columns: repeat(2, 1fr);
-    padding: 15vh 30px 40px;
+    padding: 15vh 40px 40px;
     color: var(--text);
     display: grid;
     gap: 30px;
 
     img {
         @include width-height ("100%", "300px");
+        border-radius: 30% 0;
     }
 
     .food-details {
@@ -59,6 +60,10 @@ header {
         flex-direction: column;
         padding: 0 30px;
         gap: 10px;
+
+        span{
+            display: flex;
+        }
 
         p {
             text-align: start;
@@ -113,6 +118,7 @@ header {
     .ingredients-info {
         @include Display-align-justify ("flex", "start", " space-between");
         flex-direction: column;
+        padding: 0 30px;
         text-align: start;
         gap: 10px;
 
@@ -121,8 +127,32 @@ header {
         }
 
         p {
+            text-align: start;
+            line-height: 30px;
+            width: 100%;
             border: 1px solid #dbdbdb;
-            padding: 10px;
+            padding: 20px;
+        }
+    }
+}
+/*
+=========================================
+Mobile and Tab setup
+=========================================
+*/
+@media (max-width: 550px) {
+
+    .result {
+        display: flex;
+        flex-direction: column;
+        padding: 12vh 0 40px;
+
+        img {
+            border-radius: 0;
+        }
+
+        .food-details {
+            padding: 0 20px;
         }
     }
 }

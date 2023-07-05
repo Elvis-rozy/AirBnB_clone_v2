@@ -15,8 +15,8 @@
     -->
     <header>
         <nav>
-            <a href="#"><img class="header_logo" src="Images/logo/Logo.png" alt="Foodlens logo"></a>
-            <ul>
+            <a class="logo" href="home.html"><img src="Images/logo/Logo.png" alt="Foodlens logo">FoodLENS</a>
+            <ul class="hide-for-mobile">
                 <li class="hide-for-mobile"><a href="#">Home</a></li>
                 <li class="hide-for-mobile"><a href="#categories">Categories</a></li>
                 <li class="hide-for-mobile"><a href="#favorites">Favorites</a></li>
@@ -42,7 +42,8 @@
                 --><li class="hide-for-desktop lnk"><a href="#categories">Categories</a></li> <!--
                 --><li class="hide-for-desktop lnk"><a href="#favorites">Favorites</a></li> <!--
                 --><li class="hide-for-desktop lnk"><a href="about.html">About</a></li><!--
-                --><li class="hide-for-desktop lnk"><a href="#contact">Contact</a></li>
+                --><li class="hide-for-desktop lnk"><a href="#contact">Contact</a></li><!--
+                --><li class="hide-for-desktop lnk"><a href="#">Logout</a></li>
                 </ul>
             </div>
         </nav>
@@ -51,10 +52,13 @@
     ==================== Hero Section  ====================
     -->
     <section id="home">
-        <div class="search-form">
-            <input type="search" id="search-box" placeholder="Search ...">
-            <label for="search-box" class="search"><img src="Images/logo/search.png" alt="search icon"></label>
-        </div>
+        <h1>Welcome</h1>
+        <p>Here at FoodLENS, our mission is to make everyday cooking fun and
+            exciting,<br>because we believe that cooking is key to a happier and healthier
+             life for people,<br>communities and the planet. We empower home cooks all
+             over the world<br>to help each other by sharing recipes and cooking tips.
+        </p>
+        <p>view our categories to <a href="categories.html">Get Started</a></p>
     </section>
     <!--
     ==================== Categories Section  ====================
@@ -62,7 +66,7 @@
     <section id="categories">
         <h3>Categories</h3>
         <div class="boxes">
-            <a href="categories.html#all"><span>All Categories<span></a>
+            <a href="categories.html"><span>All Categories<span></a>
             <a href="categories.html#starches"><span>Starches<span></a>
             <a href="categories.html#meat_seafood"><span>Meat/Seafood<span></a>
             <a href="categories.html#pastries"><span>Snacks and Pastries<span></a>
@@ -132,22 +136,19 @@
       <footer id="contact">
         <div class="first-sect">
             <div class="logo-box">
-                <a href="#"><img class="footer_logo" src="Images/logo/Logo.png" alt="Foodlens logo"></a>
+                <a class="logo" href="home.html"><img src="Images/logo/Logo.png" alt="Foodlens logo">FoodLENS</a>
                 <ul class="footer mode">
-                    <li>Love our work?</li>
-                    <li>Contact us >></li>
+                    <li id="tt">Love our work? Contact us</li>
                     <li id="toggle-mode">Dark/Light mode</li>
+                    <li id="logout">Log out</li>
                 </ul>
             </div>
             <ul class="footer">
                 <li>Elvis Oguoma O.</li>
-                <li><a href="#"><button id="socials">
-                    <img src="Images/logo/whatsapp.png" alt="whatsapp">
-                </button>Whatsapp</a></li>
-                <li><a href="#"><button id="socials">
+                <li><a href="https://www.linkedin.com/in/elvis-oguoma-66a77318a"><button id="socials">
                     <img src="Images/logo/linkedin.png" alt="linkedin">
                 </button>Linkedin</a></li>
-                <li><a href="#"><button id="socials">
+                <li><a href="https://www.twitter.com/r0elle"><button id="socials">
                     <img src="Images/logo/twitter.png" alt="twitter">
                 </button>Twitter</a></li>
                 <li><a href="elvisrozy52@gmail.com"><button id="socials">
@@ -156,13 +157,10 @@
             </ul>
             <ul class="footer">
                 <li>Aralu Kenechukwu C.</li>
-                <li><a href="#"><button id="socials">
-                    <img src="Images/logo/whatsapp.png" alt="whatsapp">
-                </button>Whatsapp</a></li>
-                <li><a href="#"><button id="socials">
+                <li><a href="https://www.linkedin.com/in/kenechukwu-aralu-1b7238207"><button id="socials">
                     <img src="Images/logo/linkedin.png" alt="linkedin">
                 </button>Linkedin</a></li>
-                <li><a href="#"><button id="socials">
+                <li><a href="https://twitter.com/aralukene"><button id="socials">
                     <img src="Images/logo/twitter.png" alt="twitter">
                 </button>Twitter</a></li>
                 <li><a href="junioraralu@gmail.com"><button id="socials">
@@ -171,13 +169,10 @@
             </ul>
             <ul class="footer">
                 <li>Aweda Ifeoluwa</li>
-                <li><a href="#"><button id="socials">
-                    <img src="Images/logo/whatsapp.png" alt="whatsapp">
-                </button>Whatsapp</a></li>
-                <li><a href="#"><button id="socials">
+                <li><a href="https://ng.linkedin.com/in/aweda-ifeoluwa-b91b9976"><button id="socials">
                     <img src="Images/logo/linkedin.png" alt="linkedin">
                 </button>Linkedin</a></li>
-                <li><a href="#"><button id="socials">
+                <li><a href="https://twitter.com/LovethSir"><button id="socials">
                     <img src="Images/logo/twitter.png" alt="twitter">
                 </button>Twitter</a></li>
                 <li><a href="ifeI1939@gmail.com"><button id="socials">
@@ -195,5 +190,6 @@
       -->
     <script src="app/js/home.js"></script>
     <script src="app/js/globals.js"></script>
+    <script src="app/js/searchBar.js"></script>
 </body>
 </html>

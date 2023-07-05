@@ -10,7 +10,7 @@ Footer Setup
 }
 
 footer  {
-    background-color: var(--background-light-gray);
+    background: var(--background-light-gray);
     position: relative;
 
     .first-sect {
@@ -18,9 +18,24 @@ footer  {
         border-bottom: .1px solid rgb(219 219 219);
         padding: 50px 0;
 
-        .footer_logo {
-            @include width-height ("110px", "100px");
-            border-radius: 50%;
+        .logo-box {
+            @include Display-align-justify ("flex", "center", "space-between");
+            flex-direction: column;
+        }
+
+        #tt {
+            padding-bottom: 0;
+        }
+
+        .logo {
+            @include Display-align ("flex", "center");
+            flex-direction: column;
+            color: rgb(65 53 96);
+            padding-bottom: 20px;
+
+            img {
+                @include width-height ("70px", "50px");
+            }
         }
 
         .footer {
@@ -35,6 +50,7 @@ footer  {
 
         .footer li:nth-child(1) {
             font-size: 20px;
+            padding-bottom: 25px;
         }
 
         .footer li a {
@@ -66,7 +82,13 @@ footer  {
         padding: 30px 40px;
         color: var(--accent);
 
+        img {
+            @include width-height("30px", "30px");
+        }
+
         a {
+            display: flex;
+            align-items: center;
             color: var(--accent);
         }
     }
