@@ -1,0 +1,16 @@
+/*=====================================
+Mobile hide setup
+=====================================*/
+.hide-for-mobile {
+  @media (max-width: 950px) {
+      display: none;
+  }
+}
+/*=====================================
+Desktop hide setup
+=====================================*/
+.hide-for-desktop {
+  @media (min-width: 951px) {
+      display: none;
+  }
+}
