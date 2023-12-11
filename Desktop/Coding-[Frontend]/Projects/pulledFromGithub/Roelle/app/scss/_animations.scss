@@ -1,0 +1,44 @@
+@keyframes unseal {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100%); }
+}
+
+@keyframes unsealLock {
+  from { transform: translateY(47vh); }
+  to { transform: translateY(-100vh); }
+}
+
+@keyframes bloom {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}
+
+@keyframes dance {
+  0% { color: black; transform: translateY(0); margin-left: 0; }
+  25% { color: var(--cta); transform: translateY(-35px); margin-left: 10px; text-shadow: 0 15px 5px rgba(0,0,0,1); }
+  100% { color: black; transform: translateY(0); }
+}
+
+@keyframes workCarousel {
+  from { top: 0; }
+  to { top: -100%; }
+}
+
+@keyframes hover {
+  0% { top: 60%;}
+  50% { top: 40%;}
+  100% { top: 60%;}
+}
+
+@keyframes carousel {
+  from { left: 150%; }
+  to { left: -400%; }
+}
+
+@keyframes artBG {
+  0%{ background-image: url("../media/images/art.jpg"); }
+  25%{ background-image: url("../media/images/art2.jpg"); }
+  50%{ background-image: url("../media/images/art.jpg"); }
+  75%{ background-image: url("../media/images/art2.jpg"); }
+  100%{ background-image: url("../media/images/art.jpg"); }
+}

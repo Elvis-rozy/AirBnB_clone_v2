@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style: none;
+  scroll-behavior: smooth;
+  font-family:  "sand", "Archivo", "Open Sans", sans-serif;
+}
+
+:root {
+  --gold: black;
+  --ui-ux-text: rgb(102 102 102);
+
+  --body-background: rgb(0, 0, 0);
+  --border-right: rgb(255 255 255);
+  --name-color: rgb(255 255 255 / 15%);
+  --link-text: rgb(118 116 116);
+  --link-hover: rgb(122, 199, 229);
+  --text:rgb(211, 211, 211);
+  --carousel-text-color: rgb(47 180 231 / 37%);
+  --work-text:rgb(47, 180, 231);
+  --background:rgb(87, 87, 87);
+  --header-background: rgba(255, 255, 255, .1);
+  --box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+  --work-background: linear-gradient(#c0efeb, #c0ceef, #c7c0ef, #e1c0ef, #efc0d8, #efe3c0, #efe3c0, #fff);
+  --about-background: linear-gradient(#fff, #ffeaf3, #ddffb0, #e4fcff, #46a8c6);
+  --footer-background: linear-gradient(#46a8c6, #68b8d1, rgb(111 155 211));
+}
+
+@font-face {
+  font-family: droid;
+  src: url("../media/android_7.ttf");
+}
+@font-face {
+  font-family: sand;
+  src: url("../media/Quicksand-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: PoiretOne;
+  src: url("../media/PoiretOne-Regular.ttf");
+}
+@font-face {
+  font-family: RalewayI;
+  src: url("../media/Raleway/Raleway-Italic-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: RalewayV;
+  src: url("../media/Raleway/Raleway-VariableFont_wght.ttf");
+}
+
+.droid {
+  font-family: droid;
+}
+
+body {
+  transition: 3s ease;
+  //background: rgba(131, 119, 119, 0.77);
+  background: #8e9393;
+  overflow-x: hidden;
+
+  .back {
+    padding-bottom: 30px;
+    animation: 1s 2s unseal linear forwards;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 5;
+  }
+
+  .lock {
+    animation: 3s 2.35s unsealLock linear forwards;
+    width: 10vw;
+    height: 10vh;
+    border-radius: 50%;
+    left: 45%;
+    z-index: 6;
+    transform: translateY(47vh);
+    z-index: 10;
+  }
+
+  .back, .lock {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    font-size: 14px;
+    color: white;
+  }
+}
+
+/*=========================================
+Menu Links Action
+=========================================*/
+.nav-open {
+  transform: translateX(0);
+}
+.nav-closed {
+  transform: translateX(500px);
+}
+/*=========================================
+Mobile menu Styles
+=========================================*/
+.mobile-menu {
+  position: fixed;
+  top: 10vh;
+  display: flex;
+  height: 100vh;
+  width: 30%;
+  bottom: 0;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: flex-start;
+  background: rgb(0, 0, 0);
+  transition: .3s;
+  z-index: 5;
+  text-align: center;
+
+  li:last-child {
+    margin-right: 30px;
+  }
+
+  li {
+    transition: .3s;
+    width: 100%;
+    text-align: start;
+
+    a {
+      width: 100%;
+      padding: 20px 0;
+      padding-left: 60px;
+      display: flex;
+      color: white;
+      font-weight: 600;
+      font-family: droid;
+      transition: .3s;
+    }
+
+    &:hover {
+      background: var(--gold);
+      border-radius: 0 20px 20px 0;
+      a{
+        color: var(--cta);
+      }
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
+.flex {
+  display: flex;
+}
+
+.fadeOut {
+  opacity: 0;
+  transform: scale(0);
+}
+.fadeIn {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.dark {
+  transition: 2s;
+  background: #101010;
+}
